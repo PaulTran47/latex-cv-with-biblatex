@@ -28,6 +28,8 @@
   Cell \faicon{phone}: & +1 (512) 704-3025\\
   Email \faicon{envelope}: & \href{mailto:plt02013@mymail.pomona.edu}{plt02013@mymail.pomona.edu}}
 
+  \bibliography{rjhpubs, rjhreports, Rpackages}
+
   \DeclareSourcemap{
     \maps[datatype = bibtex, overwrite]{
       \map{
@@ -36,8 +38,18 @@
     }
   }
 
+  \ExecuteBibliographyOptions{useprefix = true}
+
+  % Make custom title for bibliography section
+  \makebibcategory{publications}{Publications}
+
+  % Add selected items from .bib files to be shown in CV
+  \addtocategory{publications}{
+  }
+
   \begin{document}
     \maketitle
+    \thispagestyle{firststyle}
 
     \section{Citizenship}
       ~\begin{tabular}{l}
@@ -63,7 +75,7 @@
 
     \begin{compactitem}\parskip = 0cm
       \item Cum. GPA: 3.83/4.00, Major GPA: 3.83/4.00\\
-      \item Honours Senior Activity: \textit{\href{https://drive.google.com/file/d/0B1o_SCwTPL6TRzI3clFtbGdiVk0/view?usp=sharing}{``An Extension to the Profits Theory of Investment: Less Competition, More Growth?''}}, with Derrick Choe\\
+      \item Honours Senior Activity: \textit{\href{https://drive.google.com/file/d/0B1o_SCwTPL6TRzI3clFtbGdiVk0/view?usp=sharing}{``An Extension to the Profits Theory of Investment: Less Competition, More Growth?''}} {[Stata]}, with Derrick Choe\\
       Advisor: Professor Gary Smith
     \end{compactitem}
 
@@ -73,10 +85,10 @@
     \end{tabular}
 
     \begin{compactitem}\parskip = 0cm
-      \item Assist group of economists tasked with assembling staff's forecasts for U.S. business fixed investment (BFI) ahead of each Federal Open Market Committee (FOMC) meeting (FAME, SAS, Bash).
-      \item Compiled an internal memo consisting of BFI and business sentiment survey metrics across private sectors and Federal Reserve regional banks, used by Chairman Powell in his June 2019 press conference (FAME).
-      \item Program tighter incorporation of business sentiment, trade exposure, and uncertainty metrics into models that forecast BFI (FAME).
-      \item Calculated relationship between industry-level capital expenditure growth rates from Compustat with metrics of trade exposure and uncertainty with China and other countries (FAME, SAS, (P)SQL, Bash).
+      \item {[Bash, FAME, SAS]} Assist group of economists tasked with assembling staff's forecasts for U.S. business fixed investment (BFI) ahead of each Federal Open Market Committee (FOMC) meeting.
+      \item {[FAME]} Compiled an internal memo consisting of BFI and business sentiment survey metrics across private sectors and Federal Reserve regional banks, used by Chairman Powell in his June 2019 press conference.
+      \item {[Bash, FAME, (P)SQL, SAS]} Calculated relationship between industry-level capital expenditure growth rates from Compustat with metrics of trade exposure and uncertainty with China and other countries. Metrics were published in an internal cross-division FRB memo.
+      \item {[FAME]} Implemented tighter incorporation of business sentiment, trade exposure, and uncertainty metrics into models that forecast BFI.
     \end{compactitem}
 
     \vspace*{1em}
@@ -86,19 +98,18 @@
     \end{tabular}
 
     \begin{compactitem}\parskip = 0cm
-      \item Excelled in high-pressure role supporting a group of economists charged with assembling the staff's GDP forecast ahead of each FOMC meeting. (FAME, R).
-      \item Assisting in expanding the FRB's forecasting apparatus to directly account for measurement error's role in published statistics when determining the true, underlying cyclical position of the economy (FAME, R).
-      \item Created new exhibits highlighting the estimates of the cyclical position of the economy through variables such as GDP, potential output, output gap, \& measurement error in the \href{https://www.federalreserve.gov/monetarypolicy/fomc_historical.htm#tealbooks}{\textit{Tealbook A: ``Economic and Financial Conditions: Current Situation and Outlook''}} and the \href{https://www.federalreserve.gov/monetarypolicy/fomc_historical.htm#greenbooks}{\textit{Greenbooks: ``Current Economic and Financial Condition''}} (FAME).
-      % \item Investigated relationship between statistical discrepancy and overall revisions to real GDP growth from the BEA; any changes to this relationship; and related reasons (FAME, R).
+      \item {[FAME, R]} Excelled in high-pressure role supporting a group of economists charged with assembling the staff's GDP forecast ahead of each FOMC meeting.
+      \item {[FAME, R]} Developed programmes used by FRB staff that expanded the FRB's forecasting apparatus to directly account for measurement error's role in published statistics when determining the true, underlying cyclical position of the economy.
+      \item {[FAME]} Created new exhibits highlighting the estimates of the cyclical position of the economy through variables such as GDP, potential output, output gap, \& measurement error in the \href{https://www.federalreserve.gov/monetarypolicy/fomc_historical.htm#tealbooks}{\textit{Tealbook A: ``Economic and Financial Conditions: Current Situation and Outlook''}} and the \href{https://www.federalreserve.gov/monetarypolicy/fomc_historical.htm#greenbooks}{\textit{Greenbooks: ``Current Economic and Financial Condition''}}.
+      % \item {[FAME, R]} Investigated relationship between statistical discrepancy and overall revisions to real GDP growth from the BEA; any changes to this relationship; and related reasons.
     \end{compactitem}
 
   \section{Ongoing Research Papers}
     ~\begin{tabular}{lP{15cm}}
-      2019--& \textit{``New Orders and Shipments of Capital Goods by Manufacturers: Better Forecasting Using} \textit{High-frequency Business Sentiment Survey Data"}, with Eugenio Pinto.
+      2019--& \textit{``New Orders and Shipments of Capital Goods by Manufacturers: Better Forecasting Using} \textit{High-frequency Business Sentiment Survey Data"} {[FAME]}, with Eugenio Pinto.
     \end{tabular}
 
     \begin{compactitem}\parskip = 0cm
-      \item Coded in Fame.
       \item Created two VAR models for in-sample and out-of-sample forecasting, with the base model consisting of only total shipments and total new orders, whilst the alternative model included the weekly-frequency business sentiment survey index from Evercore-ISI.
       \item Found our alternative model to perform better at forecasting investment at business cycle turning points, and had smaller forecast errors at most time horizons.
     \end{compactitem}
@@ -106,18 +117,18 @@
     \vspace*{1em}
 
     ~\begin{tabular}{lP{15cm}}
-      2018--& \textit{``The Story Chain Index: High-frequency Record Updates Linkage Across Time with No Metadata"}, with Andrew C. Chang and Sarah Adler.
+      2018--& \textit{``The Story Chain Index: High-frequency Record Updates Linkage Across Time with No}\\
+      & \textit{Metadata"} {[Bash, Python, (P)SQL]}, with Andrew C. Chang and Sarah Adler.
     \end{tabular}
 
     \begin{compactitem}\parskip = 0cm
-      \item Coded in Bash, Python, and (P)SQL.
       \item Developed algorithm that performs general semantic text matching to link high-frequency records across time, in situations where the contents of records are updated, but no meta data to link the records exist.
       \item General semantic text algorithm created from string similarities derived from Levenshtein and Jaquard string distances and record timestamps.
-      \item Programmed scripts that filtered and chronologically nearly ten million US-centric news item from the linked Thomson Reuters News Archive (TRNA) at the daily frequency.
+      \item Programmed framework that filtered and chronologically nearly ten million US-centric news item from the linked Thomson Reuters News Archive (TRNA) at the daily frequency.
       \item Constructed a daily flexible news coverage frequency index for any given number of news topics from the linked TRNA.
     \end{compactitem}
 
-  \section{Recent honours and awards}
+  \section{Honours and awards}
     ~\begin{tabular}{lllP{1cm}}
       2017 & \textbf{Distinction in Economics Senior Exercise} & Top 10\% of all submitted theses.\\
       2016 & \textbf{Harry G. Steele Scholarship} & Awarded \$4,000 in scholarship.\\
@@ -139,5 +150,20 @@
       \item \textbf{Operating Systems:} Unix, Linux, Windows.
       \item \textbf{Languages:} Vietnamese (mother tongue), English (mother tongue level), Ancient Greek (basic reading and writing level).
     \end{compactitem}
+
+% \begin{itemize}
+% 
+% \end{itemize}
+
+%  \enlargethispage*{1cm}
+%  \setlength{\bibitemsep}{2pt}
+
+  \iffalse
+  % For when I do have publications
+  \begin{publications}
+    \printbib{publications}
+  \end{publications}
+  \fi
+
 
 \end{document}
