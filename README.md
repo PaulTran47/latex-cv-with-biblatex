@@ -1,2 +1,2 @@
 # CV
-My CV and all of its LaTeX files.
+Paul Le Tran's curriculum vitae and all of its LaTeX files.
