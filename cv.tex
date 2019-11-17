@@ -1,0 +1,169 @@
+%% CV that has easy bibliographic implementation
+
+\documentclass[a4paper, 11pt]{article}
+
+  % Packages used
+  \usepackage{cv, booktabs, fontawesome}
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage{hyperref}
+  \usepackage[sfdefault,lf,t]{carlito}
+  \renewcommand{\bibfont}{\normalfont\fontsize{10}{12.4}\sffamily}
+  \usepackage{inconsolata}
+
+  % Change color to Brandeis blue
+  \def\headcolor{\color[rgb]{0.0, 0.44, 1.0}}
+
+  % Space before section headings
+  \titlespacing{\section}{0pt}{2ex}{1ex}
+
+  \name{Paul Le Tran}
+
+  \info{Work \faicon{map-marker}: & \href{https://www.federalreserve.gov/}{Board of Governors of the Federal Reserve System},
+                                          Constitution Ave NW \& 20th St NW,
+                                          Washington, DC 20551,
+                                          United States of America.\\
+  Website \faicon{home}: & \href{https://paulletran.com/}{https://paulletran.com/}\\
+  Github \faicon{github}: & \href{https://github.com/PaulTran47}{https://www.github.com/paultran47/}\\
+  Cell \faicon{phone}: & +1 (512) 704-3025\\
+  Email \faicon{envelope}: & \href{mailto:plt02013@mymail.pomona.edu}{plt02013@mymail.pomona.edu}}
+
+  \bibliography{publications}
+
+  \DeclareSourcemap{
+    \maps[datatype = bibtex, overwrite]{
+      \map{
+        \step[fieldset = month, null]
+      }
+    }
+  }
+
+  \ExecuteBibliographyOptions{useprefix = true}
+
+  % Make custom title for bibliography section
+  \makebibcategory{publications}{Publications}
+
+  % Add selected items from .bib files to be shown in CV
+  \addtocategory{publications}{
+  }
+
+  \begin{document}
+    \maketitle
+    \thispagestyle{firststyle}
+
+    \section{Citizenship}
+      ~\begin{tabular}{l}
+        United States of America\\
+      \end{tabular}
+
+    \section{Education}
+      ~\begin{tabular}{lll}
+        2017 & \textbf{B.A., Mathematics} & Pomona College\\
+      \end{tabular}
+
+    \begin{compactitem}\parskip = 0cm
+      \item Cum. GPA: 3.83/4.00, Major GPA: 3.83/4.00\\
+      \item Honours Thesis: \textit{\href{https://drive.google.com/file/d/0B1o_SCwTPL6TaEZuZ0ZBdXhlRms/view?usp=sharing}{``Mathematically Modelling the Dynamics of Tuberculosis''}}, (sole author).\\
+      Advisor: Professor Adolfo J. Rumbos
+    \end{compactitem}
+
+    \vspace*{1em}
+
+    ~\begin{tabular}{lll}
+      2017 & \textbf{B.A., Mathematical Economics} & Pomona College\\
+    \end{tabular}
+
+    \begin{compactitem}\parskip = 0cm
+      \item Cum. GPA: 3.83/4.00, Major GPA: 3.83/4.00\\
+      \item Honours Senior Activity: \textit{\href{https://drive.google.com/file/d/0B1o_SCwTPL6TRzI3clFtbGdiVk0/view?usp=sharing}{``An Extension to the Profits Theory of Investment: Less Competition, More Growth?''}} {[Stata]}, with Derrick Choe\\
+      Advisor: Professor Gary Smith
+    \end{compactitem}
+
+  \section{Employment History}
+    ~\begin{tabular}{llP{15cm}}
+      2018-- & \textbf{Senior Research Assistant}, Board of Governors of the Federal Reserve System.
+    \end{tabular}
+
+    \begin{compactitem}\parskip = 0cm
+      \item {[Bash, FAME, SAS]} Assist group of economists tasked with assembling staff's forecasts for U.S. business fixed investment (BFI) ahead of each Federal Open Market Committee (FOMC) meeting.
+      \item {[FAME]} Compiled an internal memo consisting of BFI and business sentiment survey metrics across private sectors and Federal Reserve regional banks, used by Chairman Powell in his June 2019 press conference.
+      \item {[Bash, FAME, (P)SQL, SAS]} Calculated relationship between industry-level capital expenditure growth rates from Compustat with metrics of trade exposure and uncertainty with China and other countries. Metrics were published in an internal cross-division FRB memo.
+      \item {[FAME]} Implemented tighter incorporation of business sentiment, trade exposure, and uncertainty metrics into models that forecast BFI.
+    \end{compactitem}
+
+    \vspace*{1em}
+
+    ~\begin{tabular}{llP{15cm}}
+      2017--2018 & \textbf{Research Assistant}, Board of Governors of the Federal Reserve System.
+    \end{tabular}
+
+    \begin{compactitem}\parskip = 0cm
+      \item {[FAME, R]} Excelled in high-pressure role supporting a group of economists charged with assembling the staff's GDP forecast ahead of each FOMC meeting.
+      \item {[FAME, R]} Developed programmes used by FRB staff that expanded the FRB's forecasting apparatus to directly account for measurement error's role in published statistics when determining the true, underlying cyclical position of the economy.
+      \item {[FAME]} Created new exhibits highlighting the estimates of the cyclical position of the economy through variables such as GDP, potential output, output gap, \& measurement error in the \href{https://www.federalreserve.gov/monetarypolicy/fomc_historical.htm#tealbooks}{\textit{Tealbook A: ``Economic and Financial Conditions: Current Situation and Outlook''}} and the \href{https://www.federalreserve.gov/monetarypolicy/fomc_historical.htm#greenbooks}{\textit{Greenbooks: ``Current Economic and Financial Condition''}}.
+      % \item {[FAME, R]} Investigated relationship between statistical discrepancy and overall revisions to real GDP growth from the BEA; any changes to this relationship; and related reasons.
+    \end{compactitem}
+
+  \section{Ongoing Research Papers}
+    ~\begin{tabular}{lP{15cm}}
+      2019--& \textit{``New Orders and Shipments of Capital Goods by Manufacturers: Better Forecasting Using} \textit{High-frequency Business Sentiment Survey Data"} {[FAME]}, with Eugenio Pinto.
+    \end{tabular}
+
+    \begin{compactitem}\parskip = 0cm
+      \item Created two VAR models for in-sample and out-of-sample forecasting, with the base model consisting of only total shipments and total new orders, whilst the alternative model included the weekly-frequency business sentiment survey index from Evercore-ISI.
+      \item Found our alternative model to perform better at forecasting investment at business cycle turning points, and had smaller forecast errors at most time horizons.
+    \end{compactitem}
+
+    \vspace*{1em}
+
+    ~\begin{tabular}{lP{15cm}}
+      2018--& \textit{``The Story Chain Index: High-frequency Record Updates Linkage Across Time with No}\\
+      & \textit{Metadata"} {[Bash, Python, (P)SQL]}, with Andrew C. Chang and Sarah Adler.
+    \end{tabular}
+
+    \begin{compactitem}\parskip = 0cm
+      \item Developed algorithm that performs general semantic text matching to link high-frequency records across time, in situations where the contents of records are updated, but no meta data to link the records exist.
+      \item General semantic text algorithm created from string similarities derived from Levenshtein and Jaquard string distances and record timestamps.
+      \item Programmed framework that filtered and chronologically nearly ten million US-centric news item from the linked Thomson Reuters News Archive (TRNA) at the daily frequency.
+      \item Constructed a daily flexible news coverage frequency index for any given number of news topics from the linked TRNA.
+    \end{compactitem}
+
+  \section{Honours and awards}
+    ~\begin{tabular}{lllP{1cm}}
+      2017 & \textbf{Distinction in Economics Senior Exercise} & Top 10\% of all submitted theses.\\
+      2016 & \textbf{Harry G. Steele Scholarship} & Awarded \$4,000 in scholarship.\\
+      2014-2015 & \textbf{Pomona College Scholar} & Top 25\% of class in cum. GPA.\\
+      2013 & \textbf{Flextronics Texas Scholarship} & Awarded \$1,000 in scholarship.
+    \end{tabular}
+
+  \section{Coursework}
+    \begin{compactitem}\parskip = 0cm
+      \item \textbf{Economics:} Senior Activity in Economics, Senior Seminar in Economics, Advanced Econometrics, Advanced Macroeconomic Analysis, Game Theory for Economists, Econometrics, Corporate Finance,  Managerial Accounting Financial Analysis, Microeconomic Theory,  Macroeconomic Theory, Principles: Microeconomics, Principles: Macroeconomics.
+      \item  \textbf{Mathematics:} Senior Thesis in Mathematics, Seminar in Mathematical Exposition, Mathematical Modelling (CP), Statistical Linear Models, Differential Equations/Modelling, Abstract Algebra I: Groups \& Rings, Mathematical Analysis I, Introduction to Analysis, Calculus III (Multi-variable Calculus), Linear Algebra, Economic Statistics, Honours Topics in Calculus II.
+    \end{compactitem}
+
+  \section{Other Information}
+    \begin{compactitem}\parskip = 0cm
+      \item \textbf{Programming:} Python, Bash, SAS, \href{https://en.wikipedia.org/wiki/FAME_(database)}{FAME}, (P)SQL, R, Stata, EViews, \LaTeX.
+      \item \textbf{Web Development:} HTML, CSS, JavaScript.
+      \item \textbf{Applications:} Emacs, Sublime Text, Git, RStudio, Tableau, Microsoft Office.
+      \item \textbf{Operating Systems:} Unix, Linux, Windows.
+      \item \textbf{Languages:} Vietnamese (mother tongue), English (mother tongue level), Ancient Greek (basic reading and writing level).
+    \end{compactitem}
+
+% \begin{itemize}
+% 
+% \end{itemize}
+
+%  \enlargethispage*{1cm}
+%  \setlength{\bibitemsep}{2pt}
+
+  \iffalse
+  % For when I do have publications
+  \begin{publications}
+    \printbib{publications}
+  \end{publications}
+  \fi
+
+
+\end{document}
