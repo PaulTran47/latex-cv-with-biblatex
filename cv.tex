@@ -19,16 +19,17 @@
 
   \name{Paul Le Tran}
 
-  \info{Work \faicon{map-marker}: & \href{https://www.federalreserve.gov/}{Board of Governors of the Federal Reserve System},
-                                          Constitution Ave NW \& 20th St NW,
-                                          Washington, DC 20551,
+  \info{Work \faicon{map-marker}: & \href{https://liberalarts.utexas.edu/economics/phd/Ph.D-Program.php}{Department of Economics, The University of Texas at Austin},
+                                          2225 Speedway,
+                                          BRB 1.116, C3100,
+                                          Austin, Texas 78712,
                                           United States of America.\\
   Website \faicon{home}: & \href{https://paulletran.com/}{https://paulletran.com/}\\
   Github \faicon{github}: & \href{https://github.com/PaulTran47}{https://www.github.com/paultran47/}\\
   Cell \faicon{phone}: & +1 (512) 704-3025\\
   Email \faicon{envelope}: & \href{mailto:plt02013@mymail.pomona.edu}{plt02013@mymail.pomona.edu}}
 
-  \bibliography{publications}
+  \bibliography{rjhpubs, rjhreports, Rpackages}
 
   \DeclareSourcemap{
     \maps[datatype = bibtex, overwrite]{
@@ -40,11 +41,45 @@
 
   \ExecuteBibliographyOptions{useprefix = true}
 
+  % Add selected items from .bib files to be shown in CV
+  \addtocategory{books}{
+    MWH3,
+    expsmooth08,
+    fpp2,
+  }
+
   % Make custom title for bibliography section
-  \makebibcategory{publications}{Publications}
+  \makebibcategory{selected}{Selected refereed research papers}
 
   % Add selected items from .bib files to be shown in CV
-  \addtocategory{publications}{
+  \addtocategory{selected}{
+    YW93,
+    HDRF95,
+    HDR96,
+    HBG96,
+    HF96,
+    GHH97,
+    HKSG02,
+    HHF04,
+    HKOS05,
+    HK06,
+    HU07,
+    HB08,
+    HK08,
+    HS09,
+    HS10,
+    HF10,
+    hierarchical,
+    DHS11,
+    HBY13,
+    gefcom,
+    m3pca,
+    hfts,
+    tscv,
+    mint,
+    boostingar,
+    probhts,
+    bagginguncertainty,
   }
 
   \begin{document}
@@ -58,7 +93,13 @@
 
     \section{Education}
       ~\begin{tabular}{lll}
-        2017 & \textbf{B.A., Mathematics} & Pomona College\\
+        2020--Present & \textbf{Ph.D. in Economics}, & The University of Texas at Austin\\
+      \end{tabular}
+      
+    \vspace*{1em}
+      
+      ~\begin{tabular}{lll}
+        2017 & \textbf{B.A. in Mathematics}, & Pomona College\\
       \end{tabular}
 
     \begin{compactitem}\parskip = 0cm
@@ -70,7 +111,7 @@
     \vspace*{1em}
 
     ~\begin{tabular}{lll}
-      2017 & \textbf{B.A., Mathematical Economics} & Pomona College\\
+      2017 & \textbf{B.A. in Mathematical Economics}, & Pomona College\\
     \end{tabular}
 
     \begin{compactitem}\parskip = 0cm
@@ -81,7 +122,7 @@
 
   \section{Employment History}
     ~\begin{tabular}{llP{15cm}}
-      2018-- & \textbf{Senior Research Assistant}, Board of Governors of the Federal Reserve System.
+      2018--Present & \textbf{Senior Research Assistant}, Board of Governors of the Federal Reserve System.
     \end{tabular}
 
     \begin{compactitem}\parskip = 0cm
@@ -106,7 +147,7 @@
 
   \section{Ongoing Research Projects}
     ~\begin{tabular}{lP{15cm}}
-      2019--& \textit{``New Orders and Shipments of Capital Goods by Manufacturers: Better Forecasting Using} \textit{High-frequency Business Sentiment Survey Data"} {[FAME]}, with Eugenio Pinto.
+      2019--Present & \textit{``New Orders and Shipments of Capital Goods by Manufacturers: Better Forecasting Using} \textit{High-frequency Business Sentiment Survey Data"} {[FAME]}, with Eugenio Pinto.
     \end{tabular}
 
     \begin{compactitem}\parskip = 0cm
@@ -117,7 +158,7 @@
     \vspace*{1em}
 
     ~\begin{tabular}{lP{15cm}}
-      2018--& \textit{``The Story Chain Index: High-frequency Record Updates Linkage Across Time with No}\\
+      2018--Present & \textit{``The Story Chain Index: High-frequency Record Updates Linkage Across Time with No}\\
       & \textit{Metadata"} {[Bash, Python, (P)SQL]}, with Andrew C. Chang and Sarah Adler.
     \end{tabular}
 
@@ -161,7 +202,13 @@
   \iffalse
   % For when I do have publications
   \begin{publications}
-    \printbib{publications}
+    \printbib{books}
+    \printbib{selected}
+    \printbib{chapters}
+    \printbib{conferences}
+    \printbib{techreports} 
+    \printbib{bookreviews}
+    \printbib{editorials}
   \end{publications}
   \fi
 
