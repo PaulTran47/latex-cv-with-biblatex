@@ -1,6 +1,5 @@
 %% CV style file
-%% Paul Le Tran. Last updated 17 November 2019
-
+%% Paul Le Tran. Last updated 13 July, 2020
 % Packages used
 \usepackage{paralist, ragged2e, datetime}
 \usepackage[hyphens]{url}
@@ -9,16 +8,12 @@
 \usepackage[compact, small, sf, bf]{titlesec}
 \usepackage{kpfonts, dsfont}
 \usepackage{array}
-
 % Define ragged right columns within tables
 \newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
-
 % Color of headings
 \def\headcolor{\color[rgb]{0.6, 0, 0}}
-
 \RaggedRight
 \sloppy
-
 % Header and footer of first page
 \fancypagestyle{firststyle}
 {
@@ -26,23 +21,19 @@
    \cfoot{\thepage\ of \pageref{LastPage}}
    \renewcommand{\headrulewidth}{0pt}
 }
-
 % Header and footer of every page after first page
 \pagestyle{fancy}
 \lhead{\sf\textcolor[gray]{0.4}{Curriculum Vitae: \@name}}
 \rhead{\sf\textcolor[gray]{0.4}{\thepage\ of \pageref{LastPage}}}
 \cfoot{}
 \def\headrule{{\color[gray]{0.4}\hrule\@height\headrulewidth\@width\headwidth \vskip-\headrulewidth}}
-
 % Date format
 \newdateformat{dmy}{\THEDAY~\monthname, ~\THEYEAR}
 \dmy
-
 % Header box
 \def\name#1{\def\@name{#1}}
 \def\info#1{\def\@info{#1}}
 \newcommand{\shadebox}[3][.9]{\fcolorbox[gray]{0}{#1}{\parbox{#2}{#3}}}
-
 \def\maketitle{
 \thispagestyle{plain}
 \shadebox[0.9]{6.1in}{\sf\headcolor\hfil
@@ -58,13 +49,11 @@
 \end{tabular}}}\hfil
 }
 \vspace*{0.2cm}}
-
 % Section headings
 \titlelabel{}
 \titlespacing{\section}{0pt}{2ex}{1ex}
 \titleformat*{\section}{\headcolor\large\sf\bfseries}
 \titlespacing{\subsection}{0pt}{1ex}{0.5ex}
-
 % Miscellaneous dimensions
 \setlength{\parskip}{-0.5ex}
 \setlength{\parindent}{0em}
@@ -74,10 +63,8 @@
 \widowpenalty = 10000
 \setlist{itemsep = 1pt}
 \setdescription{labelwidth = 1.2cm, leftmargin = 1.5cm, labelindent = 1.5cm, font = \rm}
-
 % Bibliography formatting
-\usepackage[sorting=ynt, citestyle = authoryear, bibstyle = authoryear-comp, defernumbers = true, maxnames = 20, giveninits = true,  bibencoding = utf8,  terseinits = true,  uniquename = init, dashed = false, doi = false, isbn = false, natbib = true, backend = biber]{biblatex}
-
+\usepackage[sorting=ynt, citestyle = authoryear, bibstyle = authoryear-comp, defernumbers = true, maxnames = 20, giveninits = false,  bibencoding = utf8,  terseinits = true,  uniquename = init, dashed = false, doi = true, isbn = false, natbib = true, backend = biber]{biblatex}
 \DeclareFieldFormat{url}{\url{#1}}
 \DeclareFieldFormat[article]{pages}{#1}
 \DeclareFieldFormat[inproceedings]{pages}{\lowercase{pp.}#1}
@@ -89,38 +76,23 @@
 \DeclareFieldFormat[inproceedings]{title}{#1}
 \DeclareFieldFormat{shorthandwidth}{#1}
 \DeclareFieldFormat{extradate}{}
-
 % No dot before number of articles
 \usepackage{xpatch}
 \xpatchbibmacro{volume+number+eid}{\setunit*{\adddot}}{}{}{}
-
 % Remove In: for an article.
 \renewbibmacro{in:}{%
   \ifentrytype{article}{}{%
   \printtext{\bibstring{in}\intitlepunct}}}
-
 %\makeatletter
 %\DeclareDelimFormat[cbx@textcite]{nameyeardelim}{\addspace}
 %\makeatother
-
 % Bibliography categories
 \def\makebibcategory#1#2{\DeclareBibliographyCategory{#1}\defbibheading{#1}{\section*{#2}}}
 \makebibcategory{books}{Books}
-\makebibcategory{papers}{Refereed research papers}
-\makebibcategory{chapters}{Book chapters}
-\makebibcategory{conferences}{Papers in refereed conference proceedings}
-\makebibcategory{techreports}{Unpublished working papers}
-\makebibcategory{bookreviews}{Book reviews}
-\makebibcategory{editorials}{Editorials}
-\makebibcategory{phd}{PhD thesis}
-\makebibcategory{subpapers}{Submitted papers}
-\makebibcategory{curpapers}{Current projects}
-\makebibcategory{software}{Software (R packages)}
-
+\makebibcategory{techreport}{FEDS Notes under review}
 \setlength{\bibitemsep}{2.3pt}
 \setlength{\bibhang}{.9cm}
 %\renewcommand{\bibfont}{\fontsize{12}{14}}
-
 \renewcommand*{\bibitem}{\addtocounter{papers}{1}\item \mbox{}\hskip-0.9cm\hbox to 0.9cm{\hfill\arabic{papers}.~\,}}
 \defbibenvironment{bibliography}
 {\list{}
@@ -129,25 +101,19 @@
    \setlength{\parsep}{\bibparsep}}}
 {\endlist}
 {\bibitem}
-
-\newenvironment{publications}{\section{\LARGE Publications}\label{papersstart}\vspace*{0.2cm}
+\newenvironment{publications}{\section{\LARGE Publications}\label{papersstart}\vspace*{0cm}
 \titlespacing{\section}{0pt}{1.5ex}{1ex}\itemsep = 0.00cm
 }{\label{papersend}\addtocounter{sumpapers}{-1}\refstepcounter{sumpapers}\label{sumpapers}}
-
 \def\printbib#1{\printbibliography[category = #1, heading = #1]\lastref{sumpapers}}
 \renewcommand{\bibfont}{\normalfont\fontsize{10}{12.4}\rmfamily}
-
 % Counters for keeping track of papers
 \newcounter{papers}\setcounter{papers}{0}
 \newcounter{sumpapers}\setcounter{sumpapers}{0}
 \def\lastref#1{\addtocounter{#1}{\value{papers}}\setcounter{papers}{0}}
-
 % Add all papers in the bib file.
 \nocite{*}
-
 % Reformatting the bullets to look nicer
 \renewcommand{\labelitemi}{\ding{228}}
-
 \DeclareSortingScheme{ty}{
   \sort{
     \field{title}
