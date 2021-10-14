@@ -83,7 +83,8 @@
 \setdescription{labelwidth = 1.2cm, leftmargin = 1.5cm, labelindent = 1.5cm, font = \rm}
 
 %% Bibliography formatting
-\usepackage[sorting=ynt,
+\usepackage[
+  sorting = ydnt,
   citestyle = authoryear,
   bibstyle = authoryear-comp,
   defernumbers = true,
@@ -96,7 +97,8 @@
   doi = true,
   isbn = false,
   natbib = true,
-  backend = biber
+  backend = biber,
+  date = year
 ]{biblatex}
 \DeclareFieldFormat{url}{\url{#1}}
 \DeclareFieldFormat[article]{pages}{#1}
