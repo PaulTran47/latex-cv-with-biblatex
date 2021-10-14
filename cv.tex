@@ -2,14 +2,15 @@
 %% 2 percentage signs represent comments for code;
 % 1 percentage sign represents commented out code
 
-%% CV that has easy bibliographic implementation
-%% Paul Le Tran. Last updated 9 October, 2021
+%% LaTeX-style CV with biblatex package usage
+%% Paul Le Tran
+%% Last updated: 14 October, 2021.
 %=================================================
 
 %=================================================
 \documentclass[a4paper, 11pt]{article}
 
-%% Packages used
+%% Used packages
 \usepackage{cv, booktabs, fontawesome}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -17,10 +18,14 @@
 \usepackage[sfdefault,lf,t]{carlito}
 \renewcommand{\bibfont}{\normalfont\fontsize{10}{12.4}\sffamily}
 \usepackage{inconsolata}
-%% Change colour to blue
+
+%% Changing heading colour to blue
 \def\headcolor{\color[rgb]{0, 0, 0.5}}
-%% Space before section headings
+
+%% Adding space before section headings
 \titlespacing{\section}{0pt}{2ex}{1ex}
+
+%% Entering in name and information
 \name{Paul Le Tran}
 \info{Office: & \href{https://liberalarts.utexas.edu/economics/phd/Ph.D-Program.php}{Department of Economics},\\
   & College of Liberal Arts,\\
@@ -37,8 +42,8 @@
 %=================================================
 
 %=================================================
-%% Bibliography setup
-\bibliography{pltpubs}
+%% Setting up bibliography
+\bibliography{pltwip,pltpubs}
 \DeclareSourcemap{
   \maps[datatype = bibtex, overwrite]{
     \map{
@@ -47,18 +52,19 @@
   }
 }
 \ExecuteBibliographyOptions{useprefix = true}
-%% Add selected items from .bib files to be shown in CV
-\addtocategory{thesis}{
-  tbmodelling,
-  extprofitstheory,
-}
-\addtocategory{techreport}{
+
+%% Add selected items from .bib files to be shown
+\addtocategory{unpublished}{
   evercore,
+  trna,
+}
+\addtocategory{thesis}{
+  mathsthesis,
+  econthesis,
 }
 %=================================================
 
 %=================================================
-%% Section creating actual CV entries
 \begin{document}
   \maketitle
   \thispagestyle{firststyle}
@@ -67,16 +73,48 @@
     2020--Present; & \textbf{PhD, Economics}, The University of Texas at Austin (UT Austin).\\
     2017; & \textbf{BA, Mathematics}, Pomona College.\\
     2017; & \textbf{BA, Mathematical Economics}, Pomona College.\\
-    \vspace*{-0.50em}
   \end{tabular}
+  \vspace*{0.25em}
+
+  \section{Research interests}
+  ~\begin{tabular}{l}
+    Macroeconomics, econometrics, business cycles, text analysis in macroeconomics, computation\\ 
+    economics, machine learning, neural networks.
+  \end{tabular}
+  \vspace*{0.25em}
+
+  %% Adding works in progress and theses .bib files
+  \begin{publications}
+    \printbib{unpublished}
+      \vspace*{-0.25em}
+    \printbib{thesis}
+  \end{publications}
+  \vspace*{-0.625em}
 
   \section{Teaching history}
   ~\begin{tabular}{l p{12cm}}
     Fall 2021; & \textbf{ECO304K: Introduction to Microeconomics} (Synchronous Massive Online Course), Profs. Acchiardo and Mateer, UT Austin.\\
     Fall 2020, Spring 2021; & \textbf{ECO304L: Introduction to Macroeconomics}, Profs. Sadler and Acchiardo, UT Austin.\\
   \end{tabular}
-    
+  \vspace*{0.25em}
+
+  \section{Honours and awards}
+  ~\begin{tabular}{lll}
+    2020--Present; & \textbf{Graduate Teaching Fellowship}, & UT Austin.\\
+    2017; & \textbf{Distinction in Economics Senior Exercise}, & Pomona College.\\
+    2014--2015; & \textbf{Pomona College Scholar}, & Pomona College.
+  \end{tabular}
+  \vspace*{0.25em}
+
   \section{Employment history}
+  ~\begin{tabular}{ll}
+    2020--Present; & \textbf{Teaching Assistant}, UT Austin.
+  \end{tabular}
+  \begin{compactitem}\parskip = 0cm
+    \item Please see the ``Teaching history'' section for more details.
+  \end{compactitem}
+  \vspace*{1.25em}
+
   ~\begin{tabular}{ll}
     2018--2020; & \textbf{Senior Research Assistant}, Board of Governors of the Federal Reserve System.
   \end{tabular}
@@ -87,7 +125,7 @@
     \item {[FAME]} Implemented tighter incorporation of business sentiment, profit expectations, trade exposure, and uncertainty metrics into models that forecast BFI.
     \item {[Stata]} Calculated trade exposures of industries -- categorised by the U.S. Census Bureau's Manufacturers' Shipments, Inventories, and Orders release -- of final and input goods to China, Europe, and other regions for the purposes of understanding the effects of COVID-19 on supply chains.
   \end{compactitem}
-  \vspace*{1em}
+  \vspace*{1.25em}
       
   ~\begin{tabular}{ll}
     2017--2018; & \textbf{Research Assistant}, Board of Governors of the Federal Reserve System.
@@ -97,7 +135,34 @@
     \item {[FAME, R]} Developed programmes used by FRB staff that expanded the FRB's forecasting apparatus to directly account for measurement error's role in published statistics when determining the true, underlying cyclical position of the economy.
     \item {[FAME]} Created new exhibits highlighting the estimates of the cyclical position of the economy through variables such as GDP, potential output, output gap, \& measurement error in the \href{https://www.federalreserve.gov/monetarypolicy/fomc_historical.htm#tealbooks}{\textit{Tealbook A: ``Economic and Financial Conditions: Current Situation and Outlook''}} and the \href{https://www.federalreserve.gov/monetarypolicy/fomc_historical.htm#greenbooks}{\textit{Greenbooks: ``Current Economic and Financial Condition''}}.
   \end{compactitem}
+  \vspace*{0.25em}
       
+  \section{Grants}
+  ~\begin{tabular}{llll}
+    2020--2022; & \textbf{Full PhD Tuition Waiver}, & UT Austin, & \$28,381.\\
+    2016; & \textbf{Harry G. Steele Scholarship}, & Pomona College, & \$4,000.\\
+    2013; & \textbf{Flextronics Texas Scholarship}, & Pomona College, & \$1,000.
+  \end{tabular}
+  \vspace*{0.25em}
+    
+  \section{Miscellaneous information}
+  \begin{compactitem}\parskip = 0cm
+    \item \textbf{Programming:} Matlab, Python, Bash, SAS, \href{https://en.wikipedia.org/wiki/FAME_(database)}{FAME}, (P)SQL, R, Stata, EViews, \LaTeX.
+    \item \textbf{Web Development:} HTML, CSS, JavaScript.
+    \item \textbf{Applications:} Emacs, Sublime Text, Git, RStudio, Jekyll, Tableau, Microsoft Office.
+    \item \textbf{Operating Systems:} Unix, Linux, Windows.
+    \item \textbf{Languages:} Vietnamese (mother tongue), English (mother-tongue level).
+  \end{compactitem}
+\end{document}
+%=================================================
+
+%=================================================
+%% Sections that aren't currently displayed, but
+%% contain valuable information that could be
+%% folded into the CV in the future.
+
+%% Code for detailed ongoing projects
+  \iffalse      
   \section{Ongoing research projects}
   ~\begin{tabular}{l p{13cm}}
     2019--Present; & \textit{``How useful is the Evercore ISI Capital Goods Companies Survey in Forecasting Orders and Shipments of Capital Goods?"}, with Eugenio Pinto.
@@ -117,20 +182,9 @@
     \item Programmed framework that filtered and chronologically nearly ten million U.S.-centric news item from the linked Thomson Reuters News Archive (TRNA) at the daily frequency.
     \item Constructed a daily flexible news coverage frequency index for any given number of news topics from the linked TRNA.
   \end{compactitem}
-      
-  \section{Honours and awards}
-  ~\begin{tabular}{lll}
-    2017; & \textbf{Distinction in Economics Senior Exercise}, & Pomona College.\\
-    2014--2015; & \textbf{Pomona College Scholar}, & Pomona College.
-  \end{tabular}
-      
-  \section{Grants}
-  ~\begin{tabular}{llll}
-    2020--2022; & \textbf{Full PhD Tuition Waiver}, & UT Austin, & \$28,381. \\
-    2016; & \textbf{Harry G. Steele Scholarship}, & Pomona College, & \$4,000.\\
-    2013; & \textbf{Flextronics Texas Scholarship}, & Pomona College, & \$1,000.
-  \end{tabular}
-      
+  \fi
+  
+%% Code for coursework
   \iffalse
   \section{Coursework}
   \begin{compactitem}\parskip = 0cm
@@ -138,23 +192,4 @@
     \item  \textbf{Mathematics:} Senior Thesis in Mathematics, Seminar in Mathematical Exposition, Mathematical Modelling (CP), Statistical Linear Models, Differential Equations/Modelling, Abstract Algebra I: Groups \& Rings, Mathematical Analysis I, Introduction to Analysis, Calculus III (Multi-variable Calculus), Linear Algebra, Economic Statistics, Honours Topics in Calculus II.
   \end{compactitem}
   \fi
-    
-  \section{Miscellaneous information}
-  \begin{compactitem}\parskip = 0cm
-    \item \textbf{Programming:} Matlab, Python, Bash, SAS, \href{https://en.wikipedia.org/wiki/FAME_(database)}{FAME}, (P)SQL, R, Stata, EViews, \LaTeX.
-    \item \textbf{Web Development:} HTML, CSS, JavaScript.
-    \item \textbf{Applications:} Emacs, Sublime Text, Git, RStudio, Tableau, Microsoft Office.
-    \item \textbf{Operating Systems:} Unix, Linux, Windows.
-    \item \textbf{Languages:} Vietnamese (mother tongue), English (mother tongue level), Ancient Greek (basic reading and writing level).
-  \end{compactitem}
-      
-  %% Start new page for publications
-  \cleardoublepage
-    
-  %% Begin publication
-  \begin{publications}
-    \printbib{thesis}
-    \printbib{techreport}
-  \end{publications}
-\end{document}
-%=================================================
+  %=================================================
