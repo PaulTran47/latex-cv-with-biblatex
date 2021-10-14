@@ -51,10 +51,8 @@
   \shadebox[0.9]{6.1in}{
     \sf\headcolor\hfil
     \hbox to 15cm{
-    \begin{tabular}{P{6cm}}
-      \\[-0.3cm]\\
-      \section{\LARGE\textbf{\@name}}\\
-      [0.5cm]\\
+    \begin{tabular}{P{6.9cm}}
+      \section{\LARGE\textbf{\@name}}
       \normalsize Last updated: \today.\\
     \end{tabular}
     \hfill\hbox{\fontsize{10}{12}
@@ -135,7 +133,6 @@
 \makebibcategory{thesis}{BA honours theses}
 \setlength{\bibitemsep}{2.3pt}
 \setlength{\bibhang}{.9cm}
-%\renewcommand{\bibfont}{\fontsize{12}{14}}
 \renewcommand*{\bibitem}{
   \addtocounter{papers}{1}
   \item \mbox{}\hskip-0.9cm\hbox to 0.7cm{\hfill\arabic{papers}.~\,}
@@ -163,7 +160,6 @@
   \label{sumpapers}
 }
 \def\printbib#1{\printbibliography[category = #1, heading = #1]\lastref{sumpapers}}
-\renewcommand{\bibfont}{\normalfont\fontsize{10}{12.4}\rmfamily}
 
 %% Counters for keeping track of papers
 \newcounter{papers}\setcounter{papers}{0}
