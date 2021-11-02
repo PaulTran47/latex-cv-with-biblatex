@@ -16,6 +16,8 @@
 \usepackage{hyperref}
 \usepackage[sfdefault, lf, t]{carlito}
 \usepackage{inconsolata}
+\usepackage{fmtcount}
+\usepackage{refcount}
 
 %% Changing heading colour to blue
 \def\headcolor{\color[rgb]{0, 0, 0.5}}
@@ -77,7 +79,7 @@
   \section{Research}
   \begin{compactitem}\parskip = 0cm
     \item My current interests involve macroeconomics, econometrics, business cycles, structural modelling, text analysis in macroeconomics, machine learning.
-    \item I have authored or co-authored \ref{sumpapers} publications on economic topics. A list of these appear below.
+    \item I have authored or co-authored \numberstringnum{\getrefnumber{sumpapers}} publications on economic topics. A list of these appear below.
   \end{compactitem}
   \vspace*{0.25em}
 
