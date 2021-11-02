@@ -51,7 +51,9 @@ I love LaTeX and use it so much, I figured using the language for the creation a
   * [booktabs](https://ctan.org/pkg/booktabs?lang=en);
   * [fontawesome](https://ctan.org/pkg/fontawesome?lang=en);
   * [fontenc](https://ctan.org/pkg/fontenc?lang=en) (with option T1);
-  * [carlito](https://ctan.org/pkg/carlito?lang=en) (with options sfdefault, lf, t).
+  * [carlito](https://ctan.org/pkg/carlito?lang=en) (with options sfdefault, lf, t);
+  * [fmtcount](https://ctan.org/pkg/fmtcount?lang=en);
+  * [refcount](https://ctan.org/pkg/refcount?lang=en).
 
 <p align="right">
   (<a href="#latex-cv-with-biblatex">back to top.</a>)
