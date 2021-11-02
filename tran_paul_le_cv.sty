@@ -130,7 +130,7 @@
   \defbibheading{#1}{\section*{#2}}
 }
 \makebibcategory{unpublished}{Works in progress}
-\makebibcategory{thesis}{BA honours theses}
+\makebibcategory{pubs}{Publications}
 \setlength{\bibitemsep}{2.3pt}
 \setlength{\bibhang}{.9cm}
 \renewcommand*{\bibitem}{
@@ -162,8 +162,9 @@
 \def\printbib#1{\printbibliography[category = #1, heading = #1]\lastref{sumpapers}}
 
 %% Counters for keeping track of papers
+%% Subtract the number of WIPs (x) from sumpapers to not track unpublished works (0 - x = -x)
 \newcounter{papers}\setcounter{papers}{0}
-\newcounter{sumpapers}\setcounter{sumpapers}{0}
+\newcounter{sumpapers}\setcounter{sumpapers}{-2}
 \def\lastref#1{\addtocounter{#1}{\value{papers}}\setcounter{papers}{0}}
 
 %% Add all papers in the bib file.
