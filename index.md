@@ -134,7 +134,8 @@ After the preamble, your .tex file should look like this:
 
     ```latex
     %% Counters for keeping track of papers
-    %% Subtract the number of WIPs (x) from sumpapers to not track unpublished works (0 - x = -x)
+    %% Subtract the number of .bib items before publications environment (x) from sumpapers (0 - x = -x)
+    %% This does not need to be done for .bib items after the publications environment
     \newcounter{papers}\setcounter{papers}{0}
     \newcounter{sumpapers}\setcounter{sumpapers}{-2}
     \def\lastref#1{\addtocounter{#1}{\value{papers}}\setcounter{papers}{0}}
