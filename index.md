@@ -77,7 +77,7 @@ Before the actual CV document is rendered, your preamble (in the .tex file) shou
 
 * Your name should be placed in the `\name` command.
 * Relevant contact information should be placed into the `\info` command. The argument is a single string, but you can have it be a very long string with multiple line breaks.
-* The final section of your preamble should be for bibiliographies. You should declare any .bib files in the `\bibliography` command. The `\addtocategory` command allows you to specify what BibTeX entry types you want to both count in your total publications and display in the CV itself. You can find out more about all the standard entry types [here](https://www.bibtex.com/e/entry-types/).
+* The final section of your preamble should be for bibiliographies. You should declare any .bib files in the `\bibliography` command. The `\addtocategory` command allows you to specify what BibTeX entry types you want to both count in your total publications and display in the CV itself. You can find out more about all the [standard entry types here](https://www.bibtex.com/e/entry-types/).
   * It should be mentioned that custom entry types can be created, but that won't be covered here due to the relative rarity for such need
   * You can easily create customise the naming of entry types in the .sty file. The following is an example:
   ```
