@@ -4,7 +4,6 @@ google_analytics: UA-85626326-1
 
 plugins:
   - jekyll-titles-from-headings
-  - jekyll-remote-theme
 
 titles_from_headings:
   enabled:     false
@@ -13,5 +12,4 @@ titles_from_headings:
 
 show_downloads: true
 
-remote_theme: pages-themes/cayman@v0.2.0
 theme: jekyll-theme-cayman
