@@ -13,14 +13,7 @@ In the academic world, LaTeX is the standard formatting language and for good re
 To work with the source code and tailor this CV for your own needs, you will need the following installed:
 
 * Latest version of MikTeX or TeXLive.
-* The following LaTeX packages:
-  * [Biblatex](https://ctan.org/pkg/biblatex?lang=en) (with backend of [Biber](https://ctan.org/pkg/biber?lang=en));
-  * [booktabs](https://ctan.org/pkg/booktabs?lang=en);
-  * [fontawesome](https://ctan.org/pkg/fontawesome?lang=en);
-  * [fontenc](https://ctan.org/pkg/fontenc?lang=en) (with option T1);
-  * [carlito](https://ctan.org/pkg/carlito?lang=en) (with options sfdefault, lf, t);
-  * [fmtcount](https://ctan.org/pkg/fmtcount?lang=en);
-  * [refcount](https://ctan.org/pkg/refcount?lang=en).
+* The following LaTeX packages (more information can be found on [CTAN](https://ctan.org/): Biblatex, booktabs, fontawesome, fontenc, carlito, fmtcount, refcount.
 
 ## Details
 
