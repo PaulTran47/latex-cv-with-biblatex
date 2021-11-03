@@ -10,6 +10,6 @@ titles_from_headings:
   strip_title: false
   collections: false
 
-show_downloads: false
+show_downloads: true
 
 theme: jekyll-theme-cayman
