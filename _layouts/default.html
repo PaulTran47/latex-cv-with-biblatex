@@ -53,5 +53,6 @@
         ul:e.language?(n.language||"").toLowerCase():void 0,de:e.characterSet?h.characterSet:void 0,sr:e.screenSize?(b.screen||{}).width+"x"+(b.screen||{}).height:void 0,vp:e.screenSize&&b.visualViewport?(b.visualViewport||{}).width+"x"+(b.visualViewport||{}).height:void 0,ec:c||void 0,ea:f||void 0,el:d||void 0,ev:x||void 0,exd:y||void 0,exf:"undefined"!==typeof r&&!1===!!r?0:void 0};c=[];for(g in a)a.hasOwnProperty(g)&&void 0!==a[g]&&c.push(p(g)+"="+p(a[g]));var g=c.join("&");n.sendBeacon?n.sendBeacon("https://www.google-analytics.com/collect",
         g):(a=new XMLHttpRequest,a.open("POST","https://www.google-analytics.com/collect",!0),a.send(g))};k.pushState=function(a){if("function"==typeof k.onpushstate)k.onpushstate({state:a});setTimeout(l,e.delay||10);return v.apply(k,arguments)};l();b.ma={trackEvent:function(a,c,f,d){return l("event",a,c,f,d)},trackException:function(a,c){return l("exception",null,null,null,null,a,c)}}})(window,"UA-85626326-1",{anonymizeIp:!0,colorDepth:!0,characterSet:!0,screenSize:!0,language:!0});
     </script>
+    {% endif %}
   </body>
 </html>
