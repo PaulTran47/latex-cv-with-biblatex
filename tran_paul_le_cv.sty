@@ -4,7 +4,7 @@
 
 %% LaTeX-style CV with biblatex package usage
 %% Paul Le Tran
-%% Last updated: 15 October, 2021.
+%% Last updated: 03 November, 2021.
 %=================================================
 
 %% Packages used
@@ -129,8 +129,18 @@
   \DeclareBibliographyCategory{#1}
   \defbibheading{#1}{\section*{#2}}
 }
-\makebibcategory{unpublished}{Works in progress}
-\makebibcategory{pubs}{Publications}
+\makebibcategory{books}{Books}
+\makebibcategory{papers}{Refereed research papers}
+\makebibcategory{chapters}{Book chapters}
+\makebibcategory{conferences}{Papers in conference proceedings}
+\makebibcategory{techreports}{Unpublished working papers}
+\makebibcategory{bookreviews}{Book reviews}
+\makebibcategory{editorials}{Editorials}
+\makebibcategory{phd}{PhD thesis}
+\makebibcategory{subpapers}{Submitted papers}
+\makebibcategory{curpapers}{Current projects}
+\makebibcategory{wips}{Works in progress}
+\makebibcategory{ba}{BA theses}
 \setlength{\bibitemsep}{2.3pt}
 \setlength{\bibhang}{.9cm}
 \renewcommand*{\bibitem}{
@@ -148,7 +158,7 @@
 {\endlist}
 {\bibitem}
 
-%% Creating heading for publications
+%% Creating publications environment
 \newenvironment{publications}{
   \label{papersstart}
   \vspace*{0cm}
@@ -162,7 +172,8 @@
 \def\printbib#1{\printbibliography[category = #1, heading = #1]\lastref{sumpapers}}
 
 %% Counters for keeping track of papers
-%% Subtract the number of WIPs (x) from sumpapers to not track unpublished works (0 - x = -x)
+%% Subtract the number of .bib items before publications environment (x) from sumpapers (0 - x = -x)
+%% This does not need to be done for .bib items after the publications environment
 \newcounter{papers}\setcounter{papers}{0}
 \newcounter{sumpapers}\setcounter{sumpapers}{-2}
 \def\lastref#1{\addtocounter{#1}{\value{papers}}\setcounter{papers}{0}}

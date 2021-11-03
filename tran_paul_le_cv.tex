@@ -4,7 +4,7 @@
 
 %% LaTeX-style CV with biblatex package usage
 %% Paul Le Tran
-%% Last updated: 01 November, 2021.
+%% Last updated: 03 November, 2021.
 %=================================================
 
 %=================================================
@@ -54,11 +54,11 @@
 \ExecuteBibliographyOptions{useprefix = true}
 
 %% Add selected items from .bib files to be shown
-\addtocategory{unpublished}{
+\addtocategory{wips}{
   pt_evercore,
   act_trna,
 }
-\addtocategory{pubs}{
+\addtocategory{ba}{
   ct_econthesis,
   tran_mathsthesis,
 }
@@ -84,10 +84,11 @@
   \vspace*{0.25em}
 
   %% Adding works in progress and publication .bib files
+  %% You can inclide \printbib outside of the publications environment. They just won't be counted towards sumpapers
+  \printbib{wips}
+  \vspace*{-0.75em}
   \begin{publications}
-    \printbib{unpublished}
-      \vspace*{-0.75em}
-    \printbib{pubs}
+    \printbib{ba}
   \end{publications}
   \vspace*{-0.75em}
 
