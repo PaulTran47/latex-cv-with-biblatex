@@ -5,51 +5,44 @@
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" type="text/css" media="screen" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-
 {% seo %}
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    {% include head-custom.html %}
   </head>
 
   <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
 
     <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          {% if site.github.is_project_page %}
-            <a id="forkme_banner" href="{{ site.github.repository_url }}">View on GitHub</a>
-          {% endif %}
-
-          <h1 id="project_title">{{ site.title | default: site.github.repository_name }}</h1>
-          <h2 id="project_tagline">{{ site.description | default: site.github.project_tagline }}</h2>
-
-          {% if site.show_downloads %}
-            <section id="downloads">
-              <a class="zip_download_link" href="{{ site.github.zip_url }}">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="{{ site.github.tar_url }}">Download this project as a tar.gz file</a>
-            </section>
-          {% endif %}
-        </header>
-    </div>
+    <header class="page-header" role="banner">
+      <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
+      <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
+      {% if site.github.is_project_page %}
+        <a href="{{ site.github.repository_url }}" class="btn">View on GitHub</a>
+      {% endif %}
+      {% if site.show_downloads %}
+        <a href="{{ site.github.zip_url }}" class="btn">Download .zip</a>
+        <a href="{{ site.github.tar_url }}" class="btn">Download .tar.gz</a>
+      {% endif %}
+    </header>
 
     <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        {{ content }}
-      </section>
-    </div>
+    <main id="content" class="main-content" role="main">
+      {{ content }}
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        {% if site.github.is_project_page %}
-        <p class="copyright">
+      <footer class="site-footer">
+        <p style="all: unset">
           <small style="font-size: 12px">
             Published with <a href="https://pages.github.com" class="special-link" onclick="ma.trackEvent('Bottom disclaimer section', 'Click', 'GitHub Pages');" title="GitHub Pages">GitHub Pages</a>. &#9400; 2021 by <a href="https://github.com/PaulTran47" class="special-link" onclick="ma.trackEvent('Bottom disclaimer section', 'Click', 'GitHub profile');" title="GitHub profile">Paul Le Tran</a> under the terms of the <a href="https://github.com/PaulTran47/paultran47.github.io/blob/master/LICENCE.md" class="special-link" onclick="ma.trackEvent('Bottom disclaimer section', 'Click', 'MIT Licence');" title="MIT Licence">MIT Licence</a>.
           </small>
         </p>
-        {% endif %}
       </footer>
-    </div>
+    </main>
 
     {% if site.google_analytics %}
     <!-- Minimal GA JS snippet with localstorage support (3kb): https://gist.github.com/aym3nb/5e78a3c11e9974a9f17ab7d32154fd39 -->
@@ -60,6 +53,5 @@
         ul:e.language?(n.language||"").toLowerCase():void 0,de:e.characterSet?h.characterSet:void 0,sr:e.screenSize?(b.screen||{}).width+"x"+(b.screen||{}).height:void 0,vp:e.screenSize&&b.visualViewport?(b.visualViewport||{}).width+"x"+(b.visualViewport||{}).height:void 0,ec:c||void 0,ea:f||void 0,el:d||void 0,ev:x||void 0,exd:y||void 0,exf:"undefined"!==typeof r&&!1===!!r?0:void 0};c=[];for(g in a)a.hasOwnProperty(g)&&void 0!==a[g]&&c.push(p(g)+"="+p(a[g]));var g=c.join("&");n.sendBeacon?n.sendBeacon("https://www.google-analytics.com/collect",
         g):(a=new XMLHttpRequest,a.open("POST","https://www.google-analytics.com/collect",!0),a.send(g))};k.pushState=function(a){if("function"==typeof k.onpushstate)k.onpushstate({state:a});setTimeout(l,e.delay||10);return v.apply(k,arguments)};l();b.ma={trackEvent:function(a,c,f,d){return l("event",a,c,f,d)},trackException:function(a,c){return l("exception",null,null,null,null,a,c)}}})(window,"UA-85626326-1",{anonymizeIp:!0,colorDepth:!0,characterSet:!0,screenSize:!0,language:!0});
     </script>
-    {% endif %}
   </body>
 </html>
