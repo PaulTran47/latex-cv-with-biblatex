@@ -41,11 +41,11 @@ Before the actual CV document is rendered, your preamble (in the .tex file) shou
 
 %% Entering in name and information
 \name{Paul Le Tran}
-\info{Office: & \href{https://liberalarts.utexas.edu/economics/phd/Ph.D-Program.php}{Department of Economics},\\
+\info{Office: & \href{https://liberalarts.utexas.edu/economics/ph-d-program/}{Department of Economics},\\
   & College of Liberal Arts,\\
   & The University of Texas at Austin,\\
   & 2225 Speedway,\\
-  & BRB 4.134, C3100,\\
+  & BRB 2.128, C3100,\\
   & Austin, Texas 78712.\\
   \textbf{Citizenship}: & \textbf{United States of America}.\\
   Cell: & +1 (512) 704-3025\\
@@ -58,11 +58,12 @@ Before the actual CV document is rendered, your preamble (in the .tex file) shou
 \bibliography{tran_paul_le_cv_wips, tran_paul_le_cv_pubs}
 
 %% Add selected items from .bib files to be shown
-\addtocategory{unpublished}{
+\addtocategory{wips}{
   pt_evercore,
   act_trna,
 }
-\addtocategory{pubs}{
+\addtocategory{fin}{
+  tran_opecnn,
   ct_econthesis,
   tran_mathsthesis,
 }
@@ -88,6 +89,7 @@ After the preamble, your .tex file should look like this:
   \section{Education}
   ~\begin{tabular}{ll}
     2020--Present; & \textbf{PhD, Economics}, The University of Texas at Austin (UT Austin).\\
+    2023; & \textbf{MS en Passant, Economics}, UT Austin.\\
     2017; & \textbf{BA, Mathematics}, Pomona College.\\
     2017; & \textbf{BA, Mathematical Economics}, Pomona College.\\
   \end{tabular}
@@ -95,16 +97,17 @@ After the preamble, your .tex file should look like this:
 
   \section{Research}
   \begin{compactitem}\parskip = 0cm
-    \item My current interests involve macroeconomics, econometrics, business cycles, structural modelling, text analysis in macroeconomics, machine learning.
+    \item My current interests involve applications of text analysis in macroeconomics, machine learning, business cycles, and nonparametric econometrics. My research interests primarily focus on investigating how text analysis through machine learning can be used in macroeconomics to provide cleaner causal inference.
     \item I have authored or co-authored \numberstringnum{\getrefnumber{sumpapers}} publications on economic topics. A list of these appear below.
   \end{compactitem}
   \vspace*{0.25em}
 
   %% Adding works in progress and publication .bib files
+  %% You can inclide \printbib outside of the publications environment. They just won't be counted towards sumpapers
+  \printbib{wips}
+  \vspace*{-0.75em}
   \begin{publications}
-    \printbib{unpublished}
-      \vspace*{-0.75em}
-    \printbib{pubs}
+    \printbib{fin}
   \end{publications}
   \vspace*{-0.75em}
 
