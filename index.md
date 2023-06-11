@@ -113,9 +113,10 @@ After the preamble, your .tex file should look like this:
 
   \section{Honours and awards}
   ~\begin{tabular}{lll}
-    2020--Present; & \textbf{Graduate Teaching Fellowship}, & UT Austin.\\
-    2017; & \textbf{Distinction in Economics Senior Exercise}, & Pomona College.\\
-    2014--2015; & \textbf{Pomona College Scholar}, & Pomona College.
+    2023; & \textbf{PhD Summer Fellowship}, & UT Austin, & \$3,000.\\
+    2020--2023; & \textbf{Full PhD Teaching Assistantship Tuition Waiver}, & UT Austin, & \$58,008.\\
+    2016; & \textbf{Harry G. Steele Scholarship}, & Pomona College, & \$4,000.\\
+    2013; & \textbf{Flextronics Texas Scholarship}, & Pomona College, & \$1,000.
   \end{tabular}
   \vspace*{0.25em}
 ```
