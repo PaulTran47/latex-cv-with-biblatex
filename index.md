@@ -97,7 +97,7 @@ After the preamble, your .tex file should look like this:
 
   \section{Research}
   \begin{compactitem}\parskip = 0cm
-    \item My current interests involve applications of text analysis in macroeconomics, machine learning, business cycles, and nonparametric econometrics. My research interests primarily focus on investigating how text analysis through machine learning can be used in macroeconomics to provide cleaner causal inference.
+    \item My current interests involve applications of text analysis in macroeconomics, machine learning, and expectations formation. My research interests primarily focus on investigating how text analysis through machine learning can be used in macroeconomics to provide cleaner causal inference.
     \item I have authored or co-authored \numberstringnum{\getrefnumber{sumpapers}} publications on economic topics. A list of these appear below.
   \end{compactitem}
   \vspace*{0.25em}
@@ -113,10 +113,9 @@ After the preamble, your .tex file should look like this:
 
   \section{Honours and awards}
   ~\begin{tabular}{lll}
-    2023; & \textbf{PhD Summer Fellowship}, & UT Austin, & \$3,000.\\
-    2020--2023; & \textbf{Full PhD Teaching Assistantship Tuition Waiver}, & UT Austin, & \$58,008.\\
-    2016; & \textbf{Harry G. Steele Scholarship}, & Pomona College, & \$4,000.\\
-    2013; & \textbf{Flextronics Texas Scholarship}, & Pomona College, & \$1,000.
+    2020--Present; & \textbf{Graduate Teaching Fellowship}, & UT Austin.\\
+    2017; & \textbf{Distinction in Economics Senior Exercise}, & Pomona College.\\
+    2014--2015; & \textbf{Pomona College Scholar}, & Pomona College.
   \end{tabular}
   \vspace*{0.25em}
 ```
