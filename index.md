@@ -55,15 +55,16 @@ Before the actual CV document is rendered, your preamble (in the .tex file) shou
 }
 
 %% Setting up bibliography
-\bibliography{tran_paul_le_cv_wips, tran_paul_le_cv_pubs}
+\bibliography{tran_paul_le_cv_wps, tran_paul_le_cv_wips, tran_paul_le_cv_pubs}
 
 %% Add selected items from .bib files to be shown
+\addtocategory{wps}{
+  tran_opecnn,
+}
 \addtocategory{wips}{
-  pt_evercore,
-  act_trna,
+  tran_moretimepls,
 }
 \addtocategory{fin}{
-  tran_opecnn,
   ct_econthesis,
   tran_mathsthesis,
 }
@@ -102,8 +103,10 @@ After the preamble, your .tex file should look like this:
   \end{compactitem}
   \vspace*{0.25em}
 
-  %% Adding works in progress and publication .bib files
+  %% Adding working papers, works in progress, and publications .bib files
   %% You can inclide \printbib outside of the publications environment. They just won't be counted towards sumpapers
+  \printbib{wps}
+  \vspace*{-0.75em}
   \printbib{wips}
   \vspace*{-0.75em}
   \begin{publications}
