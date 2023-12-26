@@ -4,7 +4,7 @@
 
 %% LaTeX-style CV with biblatex package usage
 %% Paul Le Tran
-%% Last updated: 05 November, 2023.
+%% Last updated: 25 December, 2023.
 %=================================================
 
 %=================================================
@@ -43,7 +43,7 @@
 
 %=================================================
 %% Setting up bibliography
-\bibliography{tran_paul_le_cv_wips, tran_paul_le_cv_pubs}
+\bibliography{tran_paul_le_cv_wps, tran_paul_le_cv_wips, tran_paul_le_cv_pubs}
 \DeclareSourcemap{
   \maps[datatype = bibtex, overwrite]{
     \map{
@@ -54,12 +54,13 @@
 \ExecuteBibliographyOptions{useprefix = true}
 
 %% Add selected items from .bib files to be shown
+\addtocategory{wps}{
+  tran_opecnn,
+}
 \addtocategory{wips}{
-  pt_evercore,
-  act_trna,
+  tran_moretimepls,
 }
 \addtocategory{fin}{
-  tran_opecnn,
   ct_econthesis,
   tran_mathsthesis,
 }
@@ -87,6 +88,8 @@
 
   %% Adding works in progress and publication .bib files
   %% You can inclide \printbib outside of the publications environment. They just won't be counted towards sumpapers
+  \printbib{wps}
+  \vspace*{-0.75em}
   \printbib{wips}
   \vspace*{-0.75em}
   \begin{publications}
@@ -104,10 +107,12 @@
 
   \section{Teaching history}
   \begin{compactitem}\parskip = 0cm
-    \item I have taught undergraduate economics students as a teaching assistant (TA) across 8 semesters.
+    \item I earned an Advanced Teaching Preparation Certificate in 2023 from UT Austin.
+    \item I have taught master's and undergraduate economics students as a teaching assistant (TA) across 9 semesters.
   \end{compactitem}
   \vspace*{0.70em}
   ~\begin{tabular}{p{3.5cm} p{12cm}}
+    Spring 2023; & \textbf{ECO395L: Macro and the Labor Market}, TA, Prof. Mueller.\\
     Fall 2021, Spring 2022, Fall 2022, Spring 2023, Fall 2024; & \textbf{ECO304K: Introduction to Microeconomics} (Synchronous Massive Online Course for fall semesters), TA, Profs. Acchiardo, Geerling, and Mateer, UT Austin.\\
     Summer 2022; & \textbf{ECO325K: Health Economics}, TA, Prof. Schneider, UT Austin.\\
     Fall 2020, Spring 2021; & \textbf{ECO304L: Introduction to Macroeconomics}, TA, Profs. Sadler and Acchiardo, UT Austin.\\
@@ -155,8 +160,8 @@
       
   \section{Grants}
   ~\begin{tabular}{llll}
+    2020--2024; & \textbf{Full PhD Teaching Assistantship Tuition Waiver}, & UT Austin, & \$75,702.\\
     2023; & \textbf{PhD Summer Fellowship}, & UT Austin, & \$3,000.\\
-    2020--2023; & \textbf{Full PhD Teaching Assistantship Tuition Waiver}, & UT Austin, & \$58,008.\\
     2016; & \textbf{Harry G. Steele Scholarship}, & Pomona College, & \$4,000.\\
     2013; & \textbf{Flextronics Texas Scholarship}, & Pomona College, & \$1,000.
   \end{tabular}
@@ -166,7 +171,7 @@
   \begin{compactitem}\parskip = 0cm
     \item \textbf{Programming:} Matlab, Python, Bash, SAS, \href{https://en.wikipedia.org/wiki/FAME_(database)}{FAME}, (P)SQL, R, Stata, EViews, \LaTeX.
     \item \textbf{Web Development:} Vanilla HTML, CSS, JS; Jekyll.
-    \item \textbf{Applications:} Emacs, Visual Studio Code, Sublime Text, Git, RStudio, Tableau, Microsoft Office.
+    \item \textbf{Applications:} Visual Studio Code, Emacs, Git, Sublime Text, RStudio, Tableau, Microsoft Office.
     \item \textbf{Operating Systems:} Unix, Linux, Windows.
     \item \textbf{Languages:} Vietnamese (mother tongue), English (mother-tongue level).
   \end{compactitem}
