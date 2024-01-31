@@ -127,7 +127,7 @@ After the preamble, your .tex file should look like this:
 * To insert publications into the document, use the `\begin{publications}` command.
   * Each `\printbib` command will insert a subsection that contains all publications in that category, in chronological and descending order, and sorted by name within each year.
     * Sorting specifics can be modified within the Biblatex package options in the .sty file.
-  * The total number of publications listed inside the `publicaitons` environment is calculated and converted into an integer using the `fmtcount` package. The page numbers for the publications section are also stored. These allow you to output them in the LaTeX document if you wish.
+  * The total number of publications listed inside the `publications` environment is calculated and converted into an integer using the `fmtcount` package. The page numbers for the publications section are also stored. These allow you to output them in the LaTeX document if you wish.
   * You're allowed to have `\printbib` commands outside the `publications` enviroment, but the associated .bib items will not be counted towards the total number of publications.
     * Note that this only works for outside `\printbib` commands that __follow__ the `publications` environment. For outside `\printbib` commands that you want displayed before the `publications` environment (e.g., working papers), you will need to manually subtract the number of .bib items from `sumpapers` in the .sty file:
 
