@@ -4,15 +4,20 @@
 
 %% LaTeX-style CV with biblatex package usage
 %% Paul Le Tran
-%% Last updated: 25 December, 2023.
+%% Last updated: 1 February, 2024.
 %=================================================
-
 %% Packages used
-\usepackage{paralist, ragged2e, datetime}
+\usepackage{paralist}
+\usepackage{ragged2e}
+\usepackage{datetime}
 \usepackage[hyphens]{url}
-\usepackage{fancyhdr, lastpage, enumitem, color, pifont}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\usepackage{color}
+\usepackage{pifont}
 \usepackage[margin = 1in]{geometry}
-\usepackage[compact, small, sf, bf]{titlesec}
+\usepackage[compact, small, bf]{titlesec}
 \usepackage{kpfonts, dsfont}
 \usepackage{array}
 
@@ -20,26 +25,26 @@
 \newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
 
 %% Colour of headings
-\def\headcolor{\color[rgb]{0.6, 0, 0}}
+\def\headcolor{\color[rgb]{0, 0, 0}}
 \RaggedRight
 \sloppy
 
 %% Header and footer of first page
 \fancypagestyle{firststyle}{
   \fancyhf{}
-  \cfoot{\thepage\ of \pageref{LastPage}}
+  \cfoot{\thepage \ of {\hypersetup{linkcolor = black}\pageref{LastPage}}}
   \renewcommand{\headrulewidth}{0pt}
 }
 
 %% Header and footer of every page after first page
 \pagestyle{fancy}
-\lhead{\sf\textcolor[gray]{0.4}{\@name}}
-\rhead{\sf\textcolor[gray]{0.4}{\thepage\ of \pageref{LastPage}}}
+\lhead{\textcolor[gray]{0.4}{\textbf{\@name \ (CV, he/him/his)}}}
+\rhead{\textcolor[gray]{0.4}{\thepage \ of {\hypersetup{linkcolor = black}\pageref{LastPage}}}}
 \cfoot{}
 \def\headrule{{\color[gray]{0.4}\hrule\@height\headrulewidth\@width\headwidth \vskip-\headrulewidth}}
 
 %% Date format
-\newdateformat{dmy}{\THEDAY~\monthname, ~\THEYEAR}
+\newdateformat{dmy}{~\monthname ~\THEYEAR}
 \dmy
 
 %% Header box
@@ -49,14 +54,16 @@
 \def\maketitle{
   \thispagestyle{plain}
   \shadebox[0.9]{6.1in}{
-    \sf\headcolor\hfil
+    \headcolor\hfil
     \hbox to 15cm{
     \begin{tabular}{P{6.9cm}}
-      \section{\LARGE\textbf{\@name}}
+      \LARGE\textbf{\@name}\\
+      \normalsize \textbf{(he/him/his)}\\\\
+      \normalsize \textbf{Curriculum Vitae (CV)}\\
       \normalsize Last updated: \today.\\
     \end{tabular}
     \hfill\hbox{\fontsize{10}{12}
-    \sf
+    
     \begin{tabular}{@{}rP{7.4cm}@{}}
       \@info
     \end{tabular}}}\hfil
@@ -67,7 +74,7 @@
 %% Section headings
 \titlelabel{}
 \titlespacing{\section}{0pt}{2ex}{1ex}
-\titleformat*{\section}{\headcolor\large\sf\bfseries}
+\titleformat*{\section}{\headcolor\large\scshape}
 \titlespacing{\subsection}{0pt}{1ex}{0.5ex}
 
 %% Miscellaneous dimensions
@@ -181,8 +188,7 @@
 %% Add all papers in the bib file.
 \nocite{*}
 
-%% Reformatting the bullets to look nicer
-\renewcommand{\labelitemi}{\ding{228}}
+%% Sorting all papers by field and year
 \DeclareSortingTemplate{ty}{
   \sort{
     \field{title}
