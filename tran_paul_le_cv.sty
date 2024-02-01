@@ -41,7 +41,7 @@
 \def\headrule{{\color[gray]{0.4}\hrule\@height\headrulewidth\@width\headwidth \vskip-\headrulewidth}}
 
 %% Date format
-\newdateformat{dmy}{~\monthname ~\THEYEAR}
+\newdateformat{dmy}{\monthname \ \THEYEAR}
 \dmy
 
 %% Header box
@@ -185,8 +185,8 @@
 %% Add all papers in the bib file.
 \nocite{*}
 
-%% Sorting all papers by field and year
-\DeclareSortingTemplate{ty}{
+%% Code for sorting separate bibliography environment by paper title and year rather than author name if desired
+\DeclareSortingScheme{title_year}{
   \sort{
     \field{title}
   }
