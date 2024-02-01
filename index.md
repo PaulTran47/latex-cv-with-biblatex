@@ -226,6 +226,9 @@ After the preamble, your .tex file should look like this:
     \newcounter{papers}\setcounter{papers}{0}
     \newcounter{sumpapers}\setcounter{sumpapers}{-2}
     \def\lastref#1{\addtocounter{#1}{\value{papers}}\setcounter{papers}{0}}
+
+    %% Add all papers in the bib file.
+    \nocite{*}
     ```
 
 ## Download
