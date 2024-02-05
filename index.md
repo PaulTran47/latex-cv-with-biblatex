@@ -36,12 +36,9 @@ Before the actual CV document is rendered, your preamble (in the .tex file) shou
 \usepackage[colorlinks=true]{hyperref}
 \AtBeginDocument{
   \hypersetup{
-    urlcolor = Blue,
+    allcolors = Blue,
   }
 }
-
-%% Changing heading colour to black
-\def\headcolor{\color[rgb]{0, 0, 0}}
 
 %% Adding space before section headings
 \titlespacing{\section}{0pt}{2ex}{1ex}
@@ -206,7 +203,7 @@ After the preamble, your .tex file should look like this:
     \item \textbf{Web Development:} Vanilla HTML, CSS, JS; Jekyll.
     \item \textbf{Applications:} Visual Studio Code, Emacs, Git, Sublime Text, RStudio, Tableau, Microsoft Office.
     \item \textbf{Operating Systems:} Unix, Linux, Windows.
-    \item \textbf{Languages:} Vietnamese (mother tongue), English (mother-tongue level).
+    \item \textbf{Languages:} Vietnamese (native), English (native).
   \end{compactitem}
 \end{document}
 ```
