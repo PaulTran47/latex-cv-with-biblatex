@@ -4,7 +4,7 @@
 
 %% LaTeX-style CV with biblatex package usage
 %% Paul Le Tran
-%% Last updated: 1 February, 2024.
+%% Last updated: 24 February, 2024.
 %=================================================
 %% Packages used
 \usepackage{paralist}
@@ -176,10 +176,12 @@
 \def\printbib#1{\printbibliography[category = #1, heading = #1]\lastref{sumpapers}}
 
 %% Counters for keeping track of papers
-%% Subtract the number of .bib items before publications environment (x) from sumpapers (0 - x = -x)
+%% Sumpapers will naturally count everything contained inside of the publications environment (because you ideally want only publications counted). For conveninecen, the following lines of code modify the count of sumpapers of the publications environment if you want to count other materials, such as manuscripts submitted for publication (because you have no publications yet :') )
+%% If you're counting the number of publications, subtract the number of .bib items THAT COME BEFORE the publications environemtn (x) from sumpapers (0 - x = -x)
+%% If you're counting the number of publications, keep sumpapers argument to equal zero since these papers go under the ``Working Papers'' category, which is first
 %% This does not need to be done for .bib items after the publications environment
 \newcounter{papers}\setcounter{papers}{0}
-\newcounter{sumpapers}\setcounter{sumpapers}{-2}
+\newcounter{sumpapers}\setcounter{sumpapers}{0}
 \def\lastref#1{\addtocounter{#1}{\value{papers}}\setcounter{papers}{0}}
 
 %% Add all papers in the bib file.

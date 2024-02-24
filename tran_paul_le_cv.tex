@@ -4,7 +4,7 @@
 
 %% LaTeX-style CV with biblatex package usage
 %% Paul Le Tran
-%% Last updated: 4 February, 2024.
+%% Last updated: 24 February, 2024.
 %=================================================
 
 %=================================================
@@ -47,7 +47,7 @@
 
 %=================================================
 %% Setting up bibliography
-\bibliography{tran_paul_le_cv_wps, tran_paul_le_cv_wips, tran_paul_le_cv_pubs}
+\bibliography{tran_paul_le_cv_wps, tran_paul_le_cv_wips}
 \DeclareSourcemap{
   \maps[datatype = bibtex, overwrite]{
     \map{
@@ -63,10 +63,6 @@
 }
 \addtocategory{wips}{
   tran_moretimepls,
-}
-\addtocategory{fin}{
-  ct_econthesis,
-  tran_mathsthesis,
 }
 %=================================================
 
@@ -86,19 +82,19 @@
   \section{Research}
   \begin{compactitem}\parskip = 0cm
     \item My current interests involve applications of text analysis in macroeconomics, machine learning, and expectations formation. My research interests primarily focus on investigating how text analysis through machine learning can be used in macroeconomics to provide cleaner causal inference.
-    \item I have authored or co-authored \numberstringnum{\getrefnumber{sumpapers}} publications on economic topics. A list of these appear below.
+    \item I have submitted \numberstringnum{\getrefnumber{sumpapers}} manuscript on economic topics for publication. A list of these appear below.
+    %% Uncomment the following line when you actually get submissions accepted and published in journals
+    % \item I have authored or co-authored \numberstringnum{\getrefnumber{sumpapers}} publications on economic topics. A list of these appear below.
   \end{compactitem}
   \vspace*{0.25em}
 
   %% Adding working papers, works in progress, and publications .bib files
   %% You can inclide \printbib outside of the publications environment. They just won't be counted towards sumpapers
-  \printbib{wps}
+  \begin{publications}
+    \printbib{wps}
+  \end{publications}
   \vspace*{-0.75em}
   \printbib{wips}
-  \vspace*{-0.75em}
-  \begin{publications}
-    \printbib{fin}
-  \end{publications}
   \vspace*{-0.75em}
 
   \section{Honours and awards}
