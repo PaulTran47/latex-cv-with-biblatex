@@ -59,7 +59,7 @@ Before the actual CV document is rendered, your preamble (in the .tex file) shou
 }
 
 %% Setting up bibliography
-\bibliography{tran_paul_le_cv_wps, tran_paul_le_cv_wips, tran_paul_le_cv_pubs}
+\bibliography{tran_paul_le_cv_wps, tran_paul_le_cv_wips}
 \DeclareSourcemap{
   \maps[datatype = bibtex, overwrite]{
     \map{
@@ -75,10 +75,6 @@ Before the actual CV document is rendered, your preamble (in the .tex file) shou
 }
 \addtocategory{wips}{
   tran_moretimepls,
-}
-\addtocategory{fin}{
-  ct_econthesis,
-  tran_mathsthesis,
 }
 ```
 
@@ -117,13 +113,11 @@ After the preamble, your .tex file should look like this:
 
   %% Adding working papers, works in progress, and publications .bib files
   %% You can inclide \printbib outside of the publications environment. They just won't be counted towards sumpapers
-  \printbib{wps}
+  \begin{publications}
+    \printbib{wps}
+  \end{publications}
   \vspace*{-0.75em}
   \printbib{wips}
-  \vspace*{-0.75em}
-  \begin{publications}
-    \printbib{fin}
-  \end{publications}
   \vspace*{-0.75em}
 
   \section{Honours and awards}
@@ -217,15 +211,17 @@ After the preamble, your .tex file should look like this:
     * Note that this only works for outside `\printbib` commands that __follow__ the `publications` environment. For outside `\printbib` commands that you want displayed before the `publications` environment (e.g., working papers), you will need to manually subtract the number of .bib items from `sumpapers` in the .sty file:
 
     ```latex
-    %% Counters for keeping track of papers
-    %% Subtract the number of .bib items before publications environment (x) from sumpapers (0 - x = -x)
-    %% This does not need to be done for .bib items after the publications environment
-    \newcounter{papers}\setcounter{papers}{0}
-    \newcounter{sumpapers}\setcounter{sumpapers}{-2}
-    \def\lastref#1{\addtocounter{#1}{\value{papers}}\setcounter{papers}{0}}
+      %% Counters for keeping track of papers
+      %% Sumpapers will naturally count everything contained inside of the publications environment (because you ideally want only publications counted). For conveninecen, the following lines of code modify the count of sumpapers of the publications environment if you want to count other materials, such as manuscripts submitted for publication (because you have no publications yet :') )
+      %% If you're counting the number of publications, subtract the number of .bib items THAT COME BEFORE the publications environemtn (x) from sumpapers (0 - x = -x)
+      %% If you're counting the number of publications, keep sumpapers argument to equal zero since these papers go under the ``Working Papers'' category, which is first
+      %% This does not need to be done for .bib items after the publications environment
+      \newcounter{papers}\setcounter{papers}{0}
+      \newcounter{sumpapers}\setcounter{sumpapers}{0}
+      \def\lastref#1{\addtocounter{#1}{\value{papers}}\setcounter{papers}{0}}
 
-    %% Add all papers in the bib file.
-    \nocite{*}
+      %% Add all papers in the bib file.
+      \nocite{*}
     ```
 
 ## Download
