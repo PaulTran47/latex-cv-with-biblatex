@@ -106,8 +106,10 @@ After the preamble, your .tex file should look like this:
 
   \section{Research}
   \begin{compactitem}\parskip = 0cm
-    \item My current interests involve applications of text analysis in macroeconomics, machine learning, and expectations formation. My research interests primarily focus on investigating how text analysis through machine learning can be used in macroeconomics to provide cleaner causal inference.
-    \item I have authored or co-authored \numberstringnum{\getrefnumber{sumpapers}} publications on economic topics. A list of these appear below.
+    \item My current interests involve applications of text analysis and natural language processing in macroeconomics, particularly in central bank communication and expectations formation.
+    \item I have submitted \numberstringnum{\getrefnumber{sumpapers}} manuscript on economic topics for publication. A list of these appear below.
+    %% Uncomment the following line when you actually get submissions accepted and published in journals
+    % \item I have authored or co-authored \numberstringnum{\getrefnumber{sumpapers}} publications on economic topics. A list of these appear below.
   \end{compactitem}
   \vspace*{0.25em}
 
