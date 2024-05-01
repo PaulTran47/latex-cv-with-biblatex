@@ -187,7 +187,7 @@ After the preamble, your .tex file should look like this:
   \section{Grants}
   ~\begin{tabular}{llll}
     2020 - 2024; & \textbf{Full PhD Teaching Assistantship Tuition Waiver}, & UT Austin, & \$75,702.\\
-    2023; & \textbf{PhD Summer Fellowship}, & UT Austin, & \$3,000.\\
+    2023 - 2024; & \textbf{PhD Summer Fellowship}, & UT Austin, & \$8,000.\\
     2016; & \textbf{Harry G. Steele Scholarship}, & Pomona College, & \$4,000.\\
     2013; & \textbf{Flextronics Texas Scholarship}, & Pomona College, & \$1,000.
   \end{tabular}
