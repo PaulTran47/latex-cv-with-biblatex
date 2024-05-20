@@ -132,11 +132,12 @@ After the preamble, your .tex file should look like this:
 
   \section{Teaching history}\label{sec:teaching_history}
   \begin{compactitem}\parskip = 0cm
-    \item I have taught master's and undergraduate economics students as a teaching assistant (TA) across 9 semesters at UT Austin.
+    \item I have taught master's and undergraduate economics students as an assistant instructor (AI) and teaching assistant (TA) across 10 semesters at UT Austin.
     \item I earned an \href{https://ctl.utexas.edu/teaching-preparation-series}{Advanced Teaching Preparation Certificate} in 2023 from UT Austin.
   \end{compactitem}
   \vspace*{0.70em}
   ~\begin{tabular}{p{3.5cm} p{12cm}}
+    Fall 2024; & \textbf{ECO304L: Introduction to Macroeconomics}, AI.\\
     Spring 2024; & \textbf{ECO395L: Macro and the Labor Market} (MA course), TA, Prof. Mueller.\\
     & \textbf{ECO395K: Labor Economics} (MA course), TA, Prof. Oettinger.\\
     Fall 2021, Spring 2022, Fall 2022, Spring 2023, Fall 2024; & \textbf{ECO304K: Introduction to Microeconomics} (Synchronous Massive Online Course for fall semesters), TA, Profs. Acchiardo, Geerling, and Mateer.\\
@@ -147,7 +148,15 @@ After the preamble, your .tex file should look like this:
 
   \section{Employment history}
   ~\begin{tabular}{ll}
-    2020 - Present; & \textbf{Teaching Assistant}, UT Austin.
+    2024 - Present; & \textbf{Assistant Instructor}, UT Austin.
+  \end{tabular}
+  \begin{compactitem}\parskip = 0cm
+    \item Please see the {\hypersetup{linkcolor = black}\hyperref[sec:teaching_history]{``Teaching history''}} section for more details.
+  \end{compactitem}
+  \vspace*{1.25em}
+  
+  ~\begin{tabular}{ll}
+    2020 - 2024; & \textbf{Teaching Assistant}, UT Austin.
   \end{tabular}
   \begin{compactitem}\parskip = 0cm
     \item Please see the {\hypersetup{linkcolor = black}\hyperref[sec:teaching_history]{``Teaching history''}} section for more details.
