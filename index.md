@@ -98,6 +98,8 @@ After the preamble, your .tex file should look like this:
   \section{Education}
   ~\begin{tabular}{ll}
     2020 - Present; & \textbf{PhD, Economics}, The University of Texas at Austin (UT Austin).\\
+    & Committee: Olivier Coibion (Co-Supervisor), Christoph Boehm (Co-Supervisor),\\
+    & Saroj Bhattarai, and Amy Handlan (Brown University).\\
     2023; & \textbf{MS en Passant, Economics}, UT Austin.\\
     2017; & \textbf{BA, Mathematics}, Pomona College.\\
     2017; & \textbf{BA, Mathematical Economics}, Pomona College.\\
@@ -161,7 +163,6 @@ After the preamble, your .tex file should look like this:
   \begin{compactitem}\parskip = 0cm
     \item Please see the {\hypersetup{linkcolor = black}\hyperref[sec:teaching_history]{``Teaching history''}} section for more details.
   \end{compactitem}
-  \vspace*{1.25em}
 
   ~\begin{tabular}{ll}
     2018 - 2020; & \textbf{Senior Research Assistant}, Board of Governors of the Federal Reserve System (FRB).
