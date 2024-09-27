@@ -55,7 +55,6 @@ Before the actual CV document is rendered, your preamble (in the .tex file) shou
   Cell: & +1 (512) 704-3025\\
   Email: & \href{mailto:pltran@utexas.edu}{pltran@utexas.edu}\\
   Website: & \href{https://paulletran.com/}{https://paulletran.com/}\\
-  GitHub: & \href{https://github.com/PaulTran47}{https://www.github.com/paultran47/}
 }
 
 %% Setting up bibliography
@@ -140,9 +139,9 @@ After the preamble, your .tex file should look like this:
   \vspace*{0.70em}
   ~\begin{tabular}{p{3.5cm} p{12cm}}
     Fall 2024; & \textbf{ECO304L: Introduction to Macroeconomics}, AI.\\
-    Spring 2024; & \textbf{ECO395L: Macro and the Labor Market} (MA course), TA, Prof. Mueller.\\
-    & \textbf{ECO395K: Labor Economics} (MA course), TA, Prof. Oettinger.\\
-    Fall 2021, Spring 2022, Fall 2022, Spring 2023, Fall 2024; & \textbf{ECO304K: Introduction to Microeconomics} (Synchronous Massive Online Course for fall semesters), TA, Profs. Acchiardo, Geerling, and Mateer.\\
+    Spring 2024; & \textbf{ECO395L: Macro and the Labor Market (MA course)}, TA, Prof. Mueller.\\
+    & \textbf{ECO395K: Labor Economics (MA course)}, TA, Prof. Oettinger.\\
+    Fall 2021 - Fall 2023; & \textbf{ECO304K: Introduction to Microeconomics (Synchronous Massive Online Course for fall semesters)}, TA, Profs. Acchiardo, Geerling, and Mateer.\\
     Summer 2022; & \textbf{ECO325K: Health Economics}, TA, Prof. Schneider.\\
     Fall 2020, Spring 2021; & \textbf{ECO304L: Introduction to Macroeconomics}, TA, Profs. Sadler and Acchiardo.\\
   \end{tabular}
