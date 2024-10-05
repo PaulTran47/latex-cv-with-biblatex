@@ -42,13 +42,24 @@ I love LaTeX and use it so much, I figured using the language for the creation a
 ## Prerequisites
 * Latest version of MikTeX or TeXLive.
 * The following LaTeX packages:
-  * [Biblatex](https://ctan.org/pkg/biblatex?lang=en) (with backend of [Biber](https://ctan.org/pkg/biber?lang=en));
-  * [booktabs](https://ctan.org/pkg/booktabs?lang=en);
-  * [fontawesome](https://ctan.org/pkg/fontawesome?lang=en);
-  * [fontenc](https://ctan.org/pkg/fontenc?lang=en) (with option T1);
-  * [carlito](https://ctan.org/pkg/carlito?lang=en) (with options sfdefault, lf, t);
-  * [fmtcount](https://ctan.org/pkg/fmtcount?lang=en);
-  * [refcount](https://ctan.org/pkg/refcount?lang=en).
+  * [Biblatex](https://ctan.org/pkg/biblatex) (with backend of [Biber](https://ctan.org/pkg/biber));
+  * [newtxttext](https://ctan.org/pkg/newtx);
+  * [fontenc](https://ctan.org/pkg/fontenc) (with option T1);
+  * [booktabs](https://ctan.org/pkg/booktabs);
+  * [fmtcount](https://ctan.org/pkg/fmtcount);
+  * [refcount](https://ctan.org/pkg/refcount);
+  * [xcolor](https://ctan.org/pkg/xcolor) (with option dvipsnames);
+  * [hyperref](https://ctan.org/pkg/hyperref) (with colorlinks = true);
+  * [paralist](https://ctan.org/pkg/paralist);
+  * [ragged2e](https://ctan.org/pkg/ragged2e);
+  * [datetime](https://ctan.org/pkg/datetime);
+  * [url](https://ctan.org/pkg/url);
+  * [fancyhdr](https://ctan.org/pkg/fancyhdr);
+  * [lastpage](https://ctan.org/pkg/lastpage);
+  * [enumitem](https://ctan.org/pkg/enumitem);
+  * [geometry](https://ctan.org/pkg/geometry);
+  * [titlesec](https://ctan.org/pkg/titlesec);
+  * [array](https://ctan.org/pkg/array);
 
 <p align="right">
   (<a href="#latex-cv-with-biblatex">back to top.</a>)

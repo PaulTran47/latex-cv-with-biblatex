@@ -13,7 +13,7 @@ In the academic world, LaTeX is the standard formatting language and for good re
 To work with the source code and tailor this CV for your own needs, you will need the following installed:
 
 * Latest version of MikTeX or TeXLive.
-* The following LaTeX packages (more information can be found on [CTAN](https://ctan.org/): Biblatex, newtxtext, fontenc, booktabs, fmtcount, refcount, xcolor, hyperref, paralist, ragged2e, datetime, url, fancyhdr, lastpage, enumitem, geometry, titlesec, and array.
+* The following LaTeX packages: [Biblatex](https://ctan.org/pkg/biblatex), [newtxttext](https://ctan.org/pkg/newtx), [fontenc](https://ctan.org/pkg/fontenc), [booktabs](https://ctan.org/pkg/booktabs), [fmtcount](https://ctan.org/pkg/fmtcount), [refcount](https://ctan.org/pkg/refcount), [xcolor](https://ctan.org/pkg/xcolor), [hyperref](https://ctan.org/pkg/hyperref), [paralist](https://ctan.org/pkg/paralist), [ragged2e](https://ctan.org/pkg/ragged2e), [datetime](https://ctan.org/pkg/datetime), [url](https://ctan.org/pkg/url), [fancyhdr](https://ctan.org/pkg/fancyhdr), [lastpage](https://ctan.org/pkg/lastpage), [enumitem](https://ctan.org/pkg/enumitem), [geometry](https://ctan.org/pkg/geometry), [titlesec](https://ctan.org/pkg/titlesec), and [array](https://ctan.org/pkg/array).
 
 ## Details
 
@@ -114,7 +114,7 @@ After the preamble, your .tex file should look like this:
   \vspace*{0.25em}
 
   %% Adding working papers, works in progress, and publications .bib files
-  %% You can inclide \printbib outside of the publications environment. They just won't be counted towards sumpapers
+  %% You can include \printbib outside of the publications environment. They just won't be counted towards sumpapers
   \begin{publications}
     \printbib{wps}
   \end{publications}
@@ -240,4 +240,4 @@ Feel free to take a look at the [.tex file here](https://raw.githubusercontent.c
 
 ## Closing note
 
-If you want to find out more about me, check out my [personal website](https://paulletran.com)!
+If you want to find out more about me and my research, please check out my [personal website](https://paulletran.com)!
