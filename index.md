@@ -26,14 +26,13 @@ Before the actual CV document is rendered, your preamble (in the .tex file) shou
 
 %% Used packages
 \usepackage{tran_paul_le_cv}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
 \usepackage{newtxtext}
+\usepackage[T1]{fontenc}
 \usepackage{booktabs}
 \usepackage{fmtcount}
 \usepackage{refcount}
-\usepackage[usenames, dvipsnames]{xcolor}
-\usepackage[colorlinks=true]{hyperref}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[colorlinks = true]{hyperref}
 \AtBeginDocument{
   \hypersetup{
     allcolors = Blue,
