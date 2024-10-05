@@ -13,7 +13,7 @@ In the academic world, LaTeX is the standard formatting language and for good re
 To work with the source code and tailor this CV for your own needs, you will need the following installed:
 
 * Latest version of MikTeX or TeXLive.
-* The following LaTeX packages (more information can be found on [CTAN](https://ctan.org/): Biblatex, inputenc, fontenc, newtxtext, booktabs, fmtcount, refcount, xcolor, hyperref, paralist, ragged2e, datetime, url, fancyhdr, lastpage, enumitem, geometry, titlesec, and array.
+* The following LaTeX packages (more information can be found on [CTAN](https://ctan.org/): Biblatex, newtxtext, fontenc, booktabs, fmtcount, refcount, xcolor, hyperref, paralist, ragged2e, datetime, url, fancyhdr, lastpage, enumitem, geometry, titlesec, and array.
 
 ## Details
 
