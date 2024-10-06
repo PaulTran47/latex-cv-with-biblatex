@@ -18,6 +18,7 @@
 ---
 
 ## Overview
+
 This respository hosts all assets and source code that create my curriculum vitae (CV).
 
 I love LaTeX and use it so much, I figured using the language for the creation and maintenance of my CV is a natural move. 
@@ -29,6 +30,7 @@ I love LaTeX and use it so much, I figured using the language for the creation a
 ---
 
 ### Notable features
+
 * Built entirely with LaTeX for ease-of-maintenance and quick updates.
 * Built for academics. This means [Biblatex](https://ctan.org/pkg/biblatex?lang=en) is naturally incorporated, and all shown bibliographies are in chronological and descending order, and sorted by name within each year.
 * Total number of publications are counted for quick display if desired. 
@@ -40,6 +42,7 @@ I love LaTeX and use it so much, I figured using the language for the creation a
 ---
 
 ## Prerequisites
+
 * Latest version of MikTeX or TeXLive.
 * The following LaTeX packages:
   * [Biblatex](https://ctan.org/pkg/biblatex) (with backend of [Biber](https://ctan.org/pkg/biber));
