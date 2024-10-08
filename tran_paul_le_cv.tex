@@ -4,7 +4,7 @@
 
 %% LaTeX-style CV with biblatex package usage
 %% Paul L. Tran
-%% Last updated: 06 Oct, 2024.
+%% Last updated: 07 Oct, 2024.
 %=================================================
 
 %=================================================
@@ -14,11 +14,11 @@
 \usepackage{tran_paul_le_cv}
 \usepackage{newtxtext}
 \usepackage[T1]{fontenc}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[colorlinks = true]{hyperref}
 \usepackage{booktabs}
 \usepackage{fmtcount}
 \usepackage{refcount}
-\usepackage[dvipsnames]{xcolor}
-\usepackage[colorlinks = true]{hyperref}
 \AtBeginDocument{
   \hypersetup{
     allcolors = Blue,
@@ -45,8 +45,8 @@
 
 %=================================================
 %% Setting up bibliography
-\addbibresource{tran_paul_le_cv_wps.bib}
-\addbibresource{tran_paul_le_cv_wips.bib}
+\addbibresource{tran_paul_le_wps.bib}
+\addbibresource{tran_paul_le_wips.bib}
 \DeclareSourcemap{
   \maps[datatype = bibtex, overwrite]{
     \map{
