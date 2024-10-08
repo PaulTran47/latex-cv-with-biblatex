@@ -13,7 +13,7 @@ In the academic world, LaTeX is the standard formatting language and for good re
 To work with the source code and tailor this CV for your own needs, you will need the following installed:
 
 * Latest version of MikTeX or TeXLive.
-* The following LaTeX packages: [Biblatex](https://ctan.org/pkg/biblatex), [newtxttext](https://ctan.org/pkg/newtx), [fontenc](https://ctan.org/pkg/fontenc), [booktabs](https://ctan.org/pkg/booktabs), [fmtcount](https://ctan.org/pkg/fmtcount), [refcount](https://ctan.org/pkg/refcount), [xcolor](https://ctan.org/pkg/xcolor), [hyperref](https://ctan.org/pkg/hyperref), [paralist](https://ctan.org/pkg/paralist), [ragged2e](https://ctan.org/pkg/ragged2e), [datetime](https://ctan.org/pkg/datetime), [url](https://ctan.org/pkg/url), [fancyhdr](https://ctan.org/pkg/fancyhdr), [lastpage](https://ctan.org/pkg/lastpage), [enumitem](https://ctan.org/pkg/enumitem), [geometry](https://ctan.org/pkg/geometry), [titlesec](https://ctan.org/pkg/titlesec), and [array](https://ctan.org/pkg/array).
+* The following LaTeX packages: [Biblatex](https://ctan.org/pkg/biblatex), [newtxttext](https://ctan.org/pkg/newtx), [fontenc](https://ctan.org/pkg/fontenc), [xcolor](https://ctan.org/pkg/xcolor), [hyperref](https://ctan.org/pkg/hyperref), [booktabs](https://ctan.org/pkg/booktabs), [fmtcount](https://ctan.org/pkg/fmtcount), [refcount](https://ctan.org/pkg/refcount), [paralist](https://ctan.org/pkg/paralist), [ragged2e](https://ctan.org/pkg/ragged2e), [datetime](https://ctan.org/pkg/datetime), [url](https://ctan.org/pkg/url), [fancyhdr](https://ctan.org/pkg/fancyhdr), [lastpage](https://ctan.org/pkg/lastpage), [enumitem](https://ctan.org/pkg/enumitem), [geometry](https://ctan.org/pkg/geometry), [titlesec](https://ctan.org/pkg/titlesec), and [array](https://ctan.org/pkg/array).
 
 ## Details
 
@@ -28,11 +28,11 @@ Before the actual CV document is rendered, your preamble (in the .tex file) shou
 \usepackage{tran_paul_le_cv}
 \usepackage{newtxtext}
 \usepackage[T1]{fontenc}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[colorlinks = true]{hyperref}
 \usepackage{booktabs}
 \usepackage{fmtcount}
 \usepackage{refcount}
-\usepackage[dvipsnames]{xcolor}
-\usepackage[colorlinks = true]{hyperref}
 \AtBeginDocument{
   \hypersetup{
     allcolors = Blue,

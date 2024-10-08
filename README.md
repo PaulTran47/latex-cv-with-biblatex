@@ -48,11 +48,11 @@ I love LaTeX and use it so much, I figured using the language for the creation a
   * [Biblatex](https://ctan.org/pkg/biblatex) (with backend of [Biber](https://ctan.org/pkg/biber));
   * [newtxttext](https://ctan.org/pkg/newtx);
   * [fontenc](https://ctan.org/pkg/fontenc) (with option T1);
+  * [xcolor](https://ctan.org/pkg/xcolor) (with option dvipsnames);
+  * [hyperref](https://ctan.org/pkg/hyperref) (with colorlinks = true);
   * [booktabs](https://ctan.org/pkg/booktabs);
   * [fmtcount](https://ctan.org/pkg/fmtcount);
   * [refcount](https://ctan.org/pkg/refcount);
-  * [xcolor](https://ctan.org/pkg/xcolor) (with option dvipsnames);
-  * [hyperref](https://ctan.org/pkg/hyperref) (with colorlinks = true);
   * [paralist](https://ctan.org/pkg/paralist);
   * [ragged2e](https://ctan.org/pkg/ragged2e);
   * [datetime](https://ctan.org/pkg/datetime);
