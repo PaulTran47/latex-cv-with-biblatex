@@ -50,20 +50,21 @@
 \newcommand{\shadebox}[3][.9]{\fcolorbox[gray]{0}{#1}{\parbox{#2}{#3}}}
 \def\maketitle{
   \thispagestyle{plain}
-  \shadebox[0.9]{6.1in}{
+  \shadebox[0.9]{6in}{
     \headcolor\hfil
     \hbox to 15cm{
-    \begin{tabular}{P{6.9cm}}
-      \LARGE\textbf{\@name}\\
-      \normalsize \textbf{(he/him/his)}\\\\
-      \normalsize \textbf{Curriculum Vitae (CV)}\\
-      \normalsize Last updated: \today.\\
-    \end{tabular}
-    \hfill\hbox{\fontsize{10}{12}
+      \begin{tabular}{p{6.9cm}}
+        \LARGE\textbf{\@name}\\
+        \normalsize \textbf{(he/him/his)}\\\\
+        \normalsize \textbf{Curriculum Vitae (CV)}\\
+        \normalsize Last updated: \today\\
+      \end{tabular}
+      \hfill\hbox{\fontsize{10}{12}
     
-    \begin{tabular}{@{}rP{7.4cm}@{}}
-      \@info
-    \end{tabular}}}\hfil
+      \begin{tabular}{@{} r p{4.9cm} @{}}
+        \@info
+      \end{tabular}}
+    }\hfil
   }
   \vspace*{0.2cm}
 }
