@@ -46,14 +46,14 @@ Before the actual CV document is rendered, your preamble (in the .tex file) shou
 \name{Paul L. Tran}
 \info{Office: & \href{https://liberalarts.utexas.edu/economics/ph-d-program/}{Department of Economics},\\
   & College of Liberal Arts,\\
-  & The University of Texas at Austin,\\
+  & University of Texas at Austin,\\
   & 2225 Speedway,\\
   & BRB 2.128, C3100,\\
-  & Austin, Texas 78712.\\
-  \textbf{Citizenship}: & \textbf{United States of America}.\\
+  & Austin, Texas 78712\\
+  \textbf{Citizenship}: & \textbf{United States of America}\\
   Cell: & +1 (512) 704-3025\\
   Email: & \href{mailto:pltran@utexas.edu}{pltran@utexas.edu}\\
-  Website: & \href{https://paulletran.com/}{https://paulletran.com/}\\
+  Website: & \href{https://paulletran.com/}{https://paulletran.com/}
 }
 
 %% Setting up bibliography
@@ -95,20 +95,22 @@ After the preamble, your .tex file should look like this:
   \maketitle
   \thispagestyle{firststyle}
   \section{Education}
-  ~\begin{tabular}{ll}
-    2020 - Present; & \textbf{PhD, Economics}, The University of Texas at Austin (UT Austin).\\
-    & Committee: Olivier Coibion (Co-Supervisor), Christoph Boehm (Co-Supervisor),\\
-    & Saroj Bhattarai, and Amy Handlan (Brown University).\\
-    2023; & \textbf{MS en Passant, Economics}, UT Austin.\\
-    2017; & \textbf{BA, Mathematics}, Pomona College.\\
-    2017; & \textbf{BA, Mathematical Economics}, Pomona College.\\
+  ~\begin{tabular}{llll}
+    2020 - & \textbf{PhD} & Economics & University of Texas at Austin\\
+    2023 & \textbf{MS en Passant} & Economics & University of Texas at Austin\\
+    2017 & \textbf{BA} & Mathematics, Mathematical Economics & Pomona College
   \end{tabular}
+  \vspace*{0.25em}
+
+  \section{Dissertation}
+  \begin{compactitem}\parskip = 0cm
+    \item Committee: Olivier Coibion (Co-Supervisor), Christoph Boehm (Co-Supervisor), Saroj Bhattarai, and Amy Handlan (Brown University)
+  \end{compactitem}
   \vspace*{0.25em}
 
   \section{Research}
   \begin{compactitem}\parskip = 0cm
     \item My current interests involve applications of text analysis and natural language processing in macroeconomics, particularly in central bank communication and expectations formation.
-    \item I have submitted \numberstringnum{\getrefnumber{sumpapers}} manuscript on economic topics for publication. A list of these appear below.
     %% Uncomment the following line when you actually get submissions accepted and published in journals
     % \item I have authored or co-authored \numberstringnum{\getrefnumber{sumpapers}} publications on economic topics. A list of these appear below.
   \end{compactitem}
@@ -125,90 +127,57 @@ After the preamble, your .tex file should look like this:
 
   \section{Honours and awards}
   ~\begin{tabular}{lll}
-    2020 - Present; & \textbf{Graduate Teaching Fellowship}, & UT Austin.\\
-    2017; & \textbf{Distinction in Economics Senior Exercise}, & Pomona College.\\
-    2014 - 2015; & \textbf{Pomona College Scholar}, & Pomona College.
+    2020 - & \textbf{Graduate Teaching Fellowship} & University of Texas at Austin\\
+    2017 & \textbf{Distinction in Economics Senior Exercise} & Pomona College\\
+    2014 - 2015 & \textbf{Pomona College Scholar} & Pomona College
   \end{tabular}
   \vspace*{0.25em}
 
   \section{Teaching history}\label{sec:teaching_history}
   \begin{compactitem}\parskip = 0cm
-    \item I have taught master's and undergraduate economics students as an assistant instructor (AI) and teaching assistant (TA) across 10 semesters at UT Austin.
-    \item I earned an \href{https://ctl.utexas.edu/teaching-preparation-series}{Advanced Teaching Preparation Certificate} in 2023 from UT Austin.
+    \item Since Fall 2020, student evaluations have given an average rating for my teaching of 4.25 out of 5.
+    \item I earned an \href{https://ctl.utexas.edu/teaching-preparation-series}{Advanced Teaching Preparation Certificate} in 2023 from the University of Texas at Austin.
   \end{compactitem}
   \vspace*{0.70em}
-  ~\begin{tabular}{p{3.5cm} p{12cm}}
-    Fall 2024; & \textbf{ECO304L: Introduction to Macroeconomics}, AI.\\
-    Spring 2024; & \textbf{ECO395L: Macro and the Labor Market (MA course)}, TA, Prof. Mueller.\\
-    & \textbf{ECO395K: Labor Economics (MA course)}, TA, Prof. Oettinger.\\
-    Fall 2021 - Fall 2023; & \textbf{ECO304K: Introduction to Microeconomics (Synchronous Massive Online Course for fall semesters)}, TA, Profs. Acchiardo, Geerling, and Mateer.\\
-    Summer 2022; & \textbf{ECO325K: Health Economics}, TA, Prof. Schneider.\\
-    Fall 2020, Spring 2021; & \textbf{ECO304L: Introduction to Macroeconomics}, TA, Profs. Sadler and Acchiardo.\\
+  ~\begin{tabular}{p{2.3cm} p{2.5cm} p{3.2cm} p{6.6cm}}
+    University of \newline Texas at Austin & Fall 2024 & Assistant Instructor & \textbf{ECO304L: Introduction to \newline Macroeconomics}\\
+    & Spring 2024 & Teaching Assistant \newline (Prof. Mueller) & \textbf{ECO395L: Macro and the Labor Market \newline (MA course)}\\
+    & & Teaching Assistant \newline (Prof. Oettinger) & \textbf{ECO395K: Labor Economics (MA course)}\\
+    & Fall 2021 - 2023 & Teaching Assistant \newline (Profs. Acchiardo, \newline Geerling, Mateer) & \textbf{ECO304K: Introduction to Microeconomics \newline (Synchronous Massive Online Course for \newline fall)}\\
+    & Summer 2022 & Teaching Assistant \newline (Prof. Schneider) & \textbf{ECO325K: Health Economics}\\
+    & Fall 2020, \newline Spring 2021 & Teaching Assistant \newline (Profs. Sadler, \newline Acchiardo) & \textbf{ECO304L: Introduction to \newline Macroeconomics}
   \end{tabular}
-  \vspace*{-0.5em}
+  \vspace*{0.25em}
 
   \section{Employment history}
-  ~\begin{tabular}{ll}
-    2024 - Present; & \textbf{Assistant Instructor}, UT Austin.
-  \end{tabular}
   \begin{compactitem}\parskip = 0cm
-    \item Please see the {\hypersetup{linkcolor = black}\hyperref[sec:teaching_history]{``Teaching history''}} section for more details.
+    \item Please see the {\hypersetup{linkcolor = black}\hyperref[sec:teaching_history]{``Teaching history''}} section for more details about my teachig experience.
   \end{compactitem}
-  \vspace*{1.25em}
-  
-  ~\begin{tabular}{ll}
-    2020 - 2024; & \textbf{Teaching Assistant}, UT Austin.
+  \vspace*{0.70em}
+  ~\begin{tabular}{lll}
+    2024 - & \textbf{Assistant Instructor} & University of Texas at Austin\\
+    2020 - 2024 & \textbf{Teaching Assistant} & University of Texas at Austin\\
+    2018 - 2020 & \textbf{Senior Research Assistant} & Board of Governors of the Federal Reserve System\\
+    2017 - 2018 & \textbf{Research Assistant} & Board of Governors of the Federal Reserve System
   \end{tabular}
-  \begin{compactitem}\parskip = 0cm
-    \item Please see the {\hypersetup{linkcolor = black}\hyperref[sec:teaching_history]{``Teaching history''}} section for more details.
-  \end{compactitem}
-
-  ~\begin{tabular}{ll}
-    2018 - 2020; & \textbf{Senior Research Assistant}, Board of Governors of the Federal Reserve System (FRB).
-  \end{tabular}
-  \begin{compactitem}\parskip = 0cm
-    \item {[Bash, FAME, SAS]} Assisted group of economists tasked with assembling staff's forecasts for U.S. business fixed investment (BFI) ahead of each Federal Open Market Committee (FOMC) meeting.
-    \item {[FAME]} Compiled a memo consisting of BFI and business sentiment survey metrics across private sectors and Federal Reserve regional banks, used by Chairman Powell in his June 2019 press conference.
-    \item {[Bash, FAME, (P)SQL, SAS]} Calculated relationship between industry-level capital expenditure growth rates from Compustat with metrics of trade exposure and uncertainty with China and other countries. Metrics were published in an internal cross-division FRB memo.
-    \item {[FAME]} Implemented tighter incorporation of business sentiment, profit expectations, trade exposure, and uncertainty metrics into models that forecast BFI.
-    \item {[Stata]} Calculated trade exposures of industries (categorised by the U.S. Census Bureau's Manufacturers' Shipments, Inventories, and Orders release) of final and input goods to China, Europe, and other regions for the purposes of understanding the effects of COVID-19 on supply chains.
-    \item {[Bash, Python, (P)SQL]} Created framework that can construct daily, flexible news intensity indices for an arbitrary number of news topics. The framework is capable of performing the dictionary search, outlined in Baker, Bloom, and Davis (2016), across eight million news records in the Thomson Reuters News Archive database and constructing an index in only a few hours.
-    \begin{compactitem}
-      \item {(Acknowledgement)} The framework was used to measure non-market expectations of tax extensions through text analysis in the following paper: Chang, Andrew C. (2023). ``\href{https://drive.google.com/file/d/1ipHYM7oGXl9A5VQJqe9VwLM4ZMVJYsC9/view}{\textit{Nothing is Certain Except Death and Taxes: The Lack of Policy Uncertainty from Expiring `Temporary' Taxes}}''.
-    \end{compactitem}
-    \item {[Stata]} Collected and compiled the Drug Enforcement Agency's Automation of Reports and Consolidated Orders Systems database to measure opioid distribution to retail pharmacies as a proxy for opioid usage. Merged with cause-of-death data from the Center for Disease Control and Prevention's National Vitality Statistics Systems database to produce death measurements related to opioid usage.
-    \begin{compactitem}
-      \item {(Acknowledgement)} The database was merged with the Current Population Survey to estimate the causal effects of heroin use on labour market outcomes by proxying for heroin use with prior exposure to oxycodone in the following paper: Cho, David, Daniel I. Garcia, Joshua Montes, and Alison Weingarden (2021). ``\href{https://doi.org/10.17016/FEDS.2021.025}{\textit{Labor Market Effects of the Oxycodone-Heroin Epidemic}}''.
-    \end{compactitem}
-  \end{compactitem}
-  \vspace*{1.25em}
-      
-  ~\begin{tabular}{ll}
-    2017 - 2018; & \textbf{Research Assistant}, FRB.
-  \end{tabular}
-  \begin{compactitem}\parskip = 0cm
-    \item {[FAME, R]} Excelled in high-pressure role supporting a group of economists charged with assembling the staff's GDP forecast ahead of each FOMC meeting.
-    \item {[FAME, R]} Developed programmes used by FRB staff that expanded the FRB's forecasting apparatus to directly account for measurement error's role in published statistics when determining the true, underlying cyclical position of the economy.
-    \item {[FAME]} Created new exhibits highlighting the estimates of the cyclical position of the economy through variables such as GDP, potential output, output gap, \& measurement error in the \href{https://www.federalreserve.gov/monetarypolicy/fomc_historical.htm#tealbooks}{\textit{Tealbook A: ``Economic and Financial Conditions: Current Situation and Outlook''}} and the \href{https://www.federalreserve.gov/monetarypolicy/fomc_historical.htm#greenbooks}{\textit{Greenbooks: ``Current Economic and Financial Conditions''}}.
-  \end{compactitem}
   \vspace*{0.25em}
       
   \section{Grants}
   ~\begin{tabular}{llll}
-    2020 - 2024; & \textbf{Full PhD Teaching Assistantship Tuition Waiver}, & UT Austin, & \$75,702.\\
-    2023 - 2024; & \textbf{PhD Summer Fellowship}, & UT Austin, & \$8,000.\\
-    2016; & \textbf{Harry G. Steele Scholarship}, & Pomona College, & \$4,000.\\
-    2013; & \textbf{Flextronics Texas Scholarship}, & Pomona College, & \$1,000.
+    2024 & \textbf{PhD Summer Research Fellowship} & University of Texas at Austin, & \$5,000\\
+    2023 & \textbf{PhD Summer Research Fellowship} & University of Texas at Austin, & \$3,000\\
+    2016 & \textbf{Harry G. Steele Scholarship} & Pomona College & \$4,000\\
+    2013 & \textbf{Flextronics Texas Scholarship} & Pomona College & \$1,000
   \end{tabular}
   \vspace*{0.25em}
     
   \section{Miscellaneous information}
   \begin{compactitem}\parskip = 0cm
-    \item \textbf{Programming:} Matlab, Python, Bash, SAS, \href{https://en.wikipedia.org/wiki/FAME_(database)}{FAME}, (P)SQL, R, Stata, EViews, \LaTeX.
-    \item \textbf{Web Development:} Vanilla HTML, CSS, JS; Jekyll.
-    \item \textbf{Applications:} Visual Studio Code, Emacs, Git, Sublime Text, RStudio, Tableau, Microsoft Office.
-    \item \textbf{Operating Systems:} Unix, Linux, Windows.
-    \item \textbf{Languages:} Vietnamese (native), English (native).
+    \item \textbf{Programming:} Matlab, Python, Bash, SAS, \href{https://en.wikipedia.org/wiki/FAME_(database)}{FAME}, (P)SQL, R, Stata, EViews, \LaTeX
+    \item \textbf{Front-end Development:} Vanilla HTML, CSS, JS, Jekyll
+    \item \textbf{Applications:} Visual Studio Code, Emacs, Git, Sublime Text, RStudio, Tableau, Microsoft Office
+    \item \textbf{Operating Systems:} Unix, Linux, Windows
+    \item \textbf{Languages:} Vietnamese (native), English (native)
   \end{compactitem}
 \end{document}
 ```
