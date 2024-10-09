@@ -198,4 +198,4 @@ Feel free to take a look at the [.tex file here](https://raw.githubusercontent.c
 
 ## Closing note
 
-If you want to find out more about me and my research, please visit my [personal website](https://paulletran.com). You can also find my research on [my SSRN profile](https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=7065188), [my GitHub profile](https://github.com/PaulTran47), and my ORCID (0009-0000-8559-7915).
+If you want to find out more about me and my research, please visit my [personal website](https://paulletran.com). You can also find my research on [my Google Scholar profile](https://scholar.google.com/citations?user=0zKxrWgAAAAJ), [my SSRN profile](https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=7065188), [my GitHub profile](https://github.com/PaulTran47), and my ORCID (0009-0000-8559-7915).
