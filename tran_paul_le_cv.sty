@@ -4,88 +4,28 @@
 
 %% LaTeX-style CV with biblatex package usage
 %% Paul L. Tran
-%% Last updated: 06 Oct, 2024.
+%% Last updated: 09 Oct, 2024.
 %=================================================
-%% Packages used
-\usepackage{paralist}
-\usepackage{ragged2e}
-\usepackage{datetime}
-\usepackage[hyphens]{url}
-\usepackage{fancyhdr}
-\usepackage{lastpage}
-\usepackage{enumitem}
+
+%=================================================
+%% Loading packages
+\usepackage{newtxtext}
+\usepackage[T1]{fontenc}
 \usepackage[margin = 1in]{geometry}
+\usepackage{ragged2e}
+\usepackage{fancyhdr}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[hyphens]{url}
+\usepackage[colorlinks = true]{hyperref}
+\usepackage{booktabs}
+\usepackage{fmtcount}
+\usepackage{refcount}
+\usepackage{datetime}
 \usepackage{titlesec}
+\usepackage{lastpage}
+\usepackage{paralist}
+\usepackage{enumitem}
 \usepackage{array}
-
-%% Define ragged right columns within tables
-\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
-
-%% Colour of headings
-\def\headcolor{\color[rgb]{0, 0, 0}}
-\RaggedRight
-\sloppy
-
-%% Header and footer of first page
-\fancypagestyle{firststyle}{
-  \fancyhf{}
-  \cfoot{\thepage \ of {\hypersetup{linkcolor = black}\pageref{LastPage}}}
-  \renewcommand{\headrulewidth}{0pt}
-}
-
-%% Header and footer of every page after first page
-\pagestyle{fancy}
-\lhead{\textcolor[gray]{0.4}{\textbf{\@name \ (CV, he/him/his)}}}
-\rhead{\textcolor[gray]{0.4}{\thepage \ of {\hypersetup{linkcolor = black}\pageref{LastPage}}}}
-\cfoot{}
-\def\headrule{{\color[gray]{0.4}\hrule\@height\headrulewidth\@width\headwidth \vskip-\headrulewidth}}
-
-%% Date format
-\newdateformat{dmy}{\monthname \ \THEYEAR}
-\dmy
-
-%% Header box
-\def\name#1{\def\@name{#1}}
-\def\info#1{\def\@info{#1}}
-\newcommand{\shadebox}[3][.9]{\fcolorbox[gray]{0}{#1}{\parbox{#2}{#3}}}
-\def\maketitle{
-  \thispagestyle{plain}
-  \shadebox[0.9]{6in}{
-    \headcolor\hfil
-    \hbox to 15cm{
-      \begin{tabular}{p{6.9cm}}
-        \LARGE\textbf{\@name}\\
-        \normalsize \textbf{(he/him/his)}\\\\
-        \normalsize \textbf{Curriculum Vitae (CV)}\\
-        \normalsize Last updated: \today\\
-      \end{tabular}
-      \hfill\hbox{\fontsize{10}{12}
-    
-      \begin{tabular}{@{} r p{4.9cm} @{}}
-        \@info
-      \end{tabular}}
-    }\hfil
-  }
-  \vspace*{0.2cm}
-}
-
-%% Section headings
-\titlelabel{}
-\titlespacing{\section}{0pt}{2ex}{1ex}
-\titleformat*{\section}{\headcolor\large\scshape}
-\titlespacing{\subsection}{0pt}{1ex}{0.5ex}
-
-%% Miscellaneous dimensions
-\setlength{\parskip}{-0.5ex}
-\setlength{\parindent}{0em}
-\setlength{\headheight}{15pt}
-\setlength{\tabcolsep}{0.15cm}
-\clubpenalty = 10000
-\widowpenalty = 10000
-\setlist{itemsep = 1pt}
-\setdescription{labelwidth = 1.2cm, leftmargin = 1.5cm, labelindent = 1.5cm, font = \rm}
-
-%% Bibliography formatting
 \usepackage[
   sorting = ydnt,
   citestyle = authoryear,
@@ -103,6 +43,90 @@
   backend = biber,
   date = year
 ]{biblatex}
+
+%% Making all links blue by default
+\AtBeginDocument{
+  \hypersetup{
+    allcolors = Blue,
+  }
+}
+
+%% Define ragged right columns within tables
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+%% Colour of headings
+\def\headcolor{\color[rgb]{0, 0, 0}}
+
+\RaggedRight
+\sloppy
+
+%% Header and footer of first page
+\fancypagestyle{firststyle}{
+  \fancyhf{}
+  \cfoot{\thepage \ of {\hypersetup{linkcolor = black}\pageref{LastPage}}}
+  \renewcommand{\headrulewidth}{0pt}
+}
+
+%% Header and footer of every page after first page
+\pagestyle{fancy}
+\lhead{
+  \textcolor[gray]{0.4}{
+    \textbf{\@name \ (CV, he/him/his)}
+  }
+}
+\rhead{
+  \textcolor[gray]{0.4}{
+    \thepage \ of {\hypersetup{linkcolor = black}\pageref{LastPage}}
+  }
+}
+\cfoot{}
+\def\headrule{{\color[gray]{0.4}\hrule\@height\headrulewidth\@width\headwidth \vskip-\headrulewidth}}
+
+%% Format date to be Month YYYY
+\newdateformat{monthyeardate}{
+  \monthname[\THEMONTH] \THEYEAR
+}
+
+%% Creating header box
+\def\name#1{\def\@name{#1}}
+\def\info#1{\def\@info{#1}}
+\newcommand{\shadebox}[3][.9]{\fcolorbox[gray]{0}{#1}{\parbox{#2}{#3}}}
+\def\maketitle{
+  \thispagestyle{plain}
+  \shadebox[0.9]{6in}{
+    \headcolor\hfil
+    \hbox to 15cm{
+      \begin{tabular}{p{6.9cm}}
+        \LARGE\textbf{\@name}\\
+        \normalsize \textbf{(he/him/his)}\\\\
+        \normalsize \textbf{Curriculum Vitae (CV)}\\
+        \normalsize Last updated: \monthyeardate\today\\
+      \end{tabular}
+      \hfill\hbox{\fontsize{10}{12}
+    
+      \begin{tabular}{@{} r p{4.9cm} @{}}
+        \@info
+      \end{tabular}}
+    }
+    \hfil
+  }
+  \vspace*{0.2cm}
+}
+
+%% Creating section headings
+\titlelabel{}
+\titlespacing{\section}{0pt}{2ex}{1ex}
+\titleformat*{\section}{\headcolor\large\scshape}
+\titlespacing{\subsection}{0pt}{1ex}{0.5ex}
+
+%% Setting up parskip distance
+\setlength{\parskip}{-0.5ex}
+
+%% Setting penalty against widow lines
+\clubpenalty = 10000
+\widowpenalty = 10000
+
+%% Formatting bibliography
 \DeclareFieldFormat{url}{\url{#1}}
 \DeclareFieldFormat[article]{pages}{#1}
 \DeclareFieldFormat[inproceedings]{pages}{\lowercase{pp.}#1}
@@ -115,21 +139,14 @@
 \DeclareFieldFormat{shorthandwidth}{#1}
 \DeclareFieldFormat{extradate}{}
 
-%% No dot before number of articles
-\usepackage{xpatch}
-\xpatchbibmacro{volume+number+eid}{\setunit*{\adddot}}{}{}{}
-
-%% Remove In: for an article.
+%% Remove "In:" for an article citation
 \renewbibmacro{in:}{%
   \ifentrytype{article}{}{
     \printtext{\bibstring{in}\intitlepunct}
   }
 }
-%\makeatletter
-%\DeclareDelimFormat[cbx@textcite]{nameyeardelim}{\addspace}
-%\makeatother
 
-%% Bibliography categories
+%% Creating bibliography categories
 \def\makebibcategory#1#2{
   \DeclareBibliographyCategory{#1}
   \defbibheading{#1}{\section*{#2}}
@@ -185,7 +202,7 @@
 \newcounter{sumpapers}\setcounter{sumpapers}{0}
 \def\lastref#1{\addtocounter{#1}{\value{papers}}\setcounter{papers}{0}}
 
-%% Add all papers in the bib file.
+%% Add all papers in the bib files
 \nocite{*}
 
 %% Code for sorting separate bibliography environment by paper title and year rather than author name if desired
@@ -197,3 +214,4 @@
     \field{year}
   }
 }
+%=================================================
