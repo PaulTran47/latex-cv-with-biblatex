@@ -206,8 +206,8 @@ After the preamble, your .tex file should look like this:
 
 ## Download
 
-Feel free to take a look at the [.tex file here](https://raw.githubusercontent.com/PaulTran47/latex-cv-with-biblatex/master/tran_paul_le_cv.tex), the [.sty file here](https://raw.githubusercontent.com/PaulTran47/latex-cv-with-biblatex/master/tran_paul_le_cv.sty), my [personal CV](https://drive.google.com/file/d/1P3rTeJtPRlIMhha3hauKHkdX2BGse3ht/view) as an example, and the [GitHub repo](https://github.com/PaulTran47/latex-cv-with-biblatex) for the source code (also found by the buttons found on this website).
+Feel free to take a look at the [.tex file here](https://raw.githubusercontent.com/PaulTran47/latex-cv-with-biblatex/master/tran_paul_le_cv.tex), the [.sty file here](https://raw.githubusercontent.com/PaulTran47/latex-cv-with-biblatex/master/tran_paul_le_cv.sty), my [personal CV](https://drive.google.com/file/d/1P3rTeJtPRlIMhha3hauKHkdX2BGse3ht/view) as an example, and the [GitHub repo](https://github.com/PaulTran47/latex-cv-with-biblatex) for the source code (also found by the buttons at the top of this website).
 
 ## Closing note
 
-If you want to find out more about me and my research, please check out my [personal website](https://paulletran.com)!
+If you want to find out more about me and my research, please visit my [personal website](https://paulletran.com). You can also find my research on [my SSRN profile](https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=7065188), [my GitHub profile](https://github.com/PaulTran47), and my ORCID (0009-0000-8559-7915).
