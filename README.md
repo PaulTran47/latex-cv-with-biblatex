@@ -33,7 +33,7 @@ I love LaTeX and use it so much, I figured using the language for the creation a
 
 * Built entirely with LaTeX for ease-of-maintenance and quick updates.
 * Built for academics. This means [Biblatex](https://ctan.org/pkg/biblatex?lang=en) is naturally incorporated, and all shown bibliographies are in chronological and descending order, and sorted by name within each year.
-* Total number of publications are counted for quick display if desired. 
+* Total number of publications are counted for quick display if desired.
 
 <p align="right">
   (<a href="#latex-cv-with-biblatex">back to top.</a>)
