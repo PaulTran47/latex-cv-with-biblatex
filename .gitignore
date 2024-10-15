@@ -1,4 +1,3 @@
-
 # Created by https://www.toptal.com/developers/gitignore/api/osx,linux,windows,jekyll,database,compression,compressedarchive,compressed,sublimetext,matlab,latex,python
 # Edit at https://www.toptal.com/developers/gitignore?templates=osx,linux,windows,jekyll,database,compression,compressedarchive,compressed,sublimetext,matlab,latex,python
 
@@ -22,9 +21,9 @@
 
 ## Archiving and compression
 # Open source file format. Used by 7-Zip.
-# Mac OS X, restoration on different platforms is possible although not immediate   Yes   Based on 7z. Preserves Spotlight metadata, resource forks, owner/group information, dates and other data which would be otherwise lost with compression.
+# Mac OS X, restoration on different platforms is possible although not immediate 	Yes 	Based on 7z. Preserves Spotlight metadata, resource forks, owner/group information, dates and other data which would be otherwise lost with compression.
 *.s7z
-# Old archive versions only   Proprietary format
+# Old archive versions only 	Proprietary format
 *.ace
 # A format that compresses and doubly encrypt the data (AES256 and CAS256) avoiding brute force attacks, also hide files in an AFA file. It has two ways to safeguard data integrity and subsequent repair of the file if has an error (repair with AstroA2P (online) or Astrotite (offline)).
 *.afa
@@ -44,7 +43,7 @@
 *.bh
 # The Microsoft Windows native archive format, which is also used by many commercial installers such as InstallShield and WISE.
 *.cab
-# Originally DOS, now DOS and Windows   Created by Yaakov Gringeler; released last in 2003 (Compressia 1.0.0.1 beta), now apparently defunct. Free trial of 30 days lets user create and extract archives; after that it is possible to extract, but not to create.
+# Originally DOS, now DOS and Windows 	Created by Yaakov Gringeler; released last in 2003 (Compressia 1.0.0.1 beta), now apparently defunct. Free trial of 30 days lets user create and extract archives; after that it is possible to extract, but not to create.
 *.car
 # Open source file format.
 *.cfs
@@ -52,7 +51,7 @@
 *.cpt
 # Windows, Unix-like, Mac OS X Open source file format. Files are compressed individually with either gzip, bzip2 or lzo.
 *.dar
-# DiskDoubler   Mac OS      obsolete
+# DiskDoubler 	Mac OS 			obsolete
 *.dd
 # ??
 *.dgc
@@ -64,9 +63,9 @@
 *.egg
 # The predecessor of DGCA.
 *.gca
-# Originally DOS  Yes, but may be covered by patents  DOS era format; uses arithmetic/Markov coding
+# Originally DOS 	Yes, but may be covered by patents 	DOS era format; uses arithmetic/Markov coding
 *.ha
-# MS Windows  HKI
+# MS Windows 	HKI
 *.hki
 # Produced by ICEOWS program. Excels at text file compression.
 *.ice
@@ -74,7 +73,7 @@
 *.jar
 # Open sourced archiver with compression using the PAQ family of algorithms and optional encryption.
 *.kgb
-# Originally DOS, now multiple  Multiple  Yes   The standard format on Amiga.
+# Originally DOS, now multiple 	Multiple 	Yes 	The standard format on Amiga.
 *.lzh
 *.lha
 # Archiver originally used on The Amiga. Now copied by Microsoft to use in their .cab and .chm files.
@@ -89,20 +88,20 @@
 *.pea
 # The format from the PIM - a freeware compression tool by Ilia Muraviev. It uses an LZP-based compression algorithm with set of filters for executable, image and audio files.
 *.pim
-# PackIt  Mac OS      obsolete
+# PackIt 	Mac OS 			obsolete
 *.pit
 # Used for data in games written using the Quadruple D library for Delphi. Uses byte pair compression.
 *.qda
 # A proprietary archive format, second in popularity to .zip files.
 # The format from a commercial archiving package. Odd among commercial packages in that they focus on incorporating experimental algorithms with the highest possible compression (at the expense of speed and memory), such as PAQ, PPMD and PPMZ (PPMD with unlimited-length strings), as well as a proprietary algorithms.
 *.rk
-# Self Dissolving ARChive   Commodore 64, Commodore 128   Commodore 64, Commodore 128   Yes   SDAs refer to Self Dissolving ARC files, and are based on the Commodore 64 and Commodore 128 versions of ARC, originally written by Chris Smeets. While the files share the same extension, they are not compatible between platforms. That is, an SDA created on a Commodore 64 but run on a Commodore 128 in Commodore 128 mode will crash the machine, and vice versa. The intended successor to SDA is SFX.
+# Self Dissolving ARChive 	Commodore 64, Commodore 128 	Commodore 64, Commodore 128 	Yes 	SDAs refer to Self Dissolving ARC files, and are based on the Commodore 64 and Commodore 128 versions of ARC, originally written by Chris Smeets. While the files share the same extension, they are not compatible between platforms. That is, an SDA created on a Commodore 64 but run on a Commodore 128 in Commodore 128 mode will crash the machine, and vice versa. The intended successor to SDA is SFX.
 *.sda
 # A pre-Mac OS X Self-Extracting Archive format. StuffIt, Compact Pro, Disk Doubler and others could create .sea files, though the StuffIt versions were the most common.
 *.sea
 # Scifer Archive with internal header
 *.sen
-# Commodore 64, Commodore 128   SFX is a Self Extracting Archive which uses the LHArc compression algorithm. It was originally developed by Chris Smeets on the Commodore platform, and runs primarily using the CS-DOS extension for the Commodore 128. Unlike its predecessor SDA, SFX files will run on both the Commodore 64 and Commodore 128 regardless of which machine they were created on.
+# Commodore 64, Commodore 128 	SFX is a Self Extracting Archive which uses the LHArc compression algorithm. It was originally developed by Chris Smeets on the Commodore platform, and runs primarily using the CS-DOS extension for the Commodore 128. Unlike its predecessor SDA, SFX files will run on both the Commodore 64 and Commodore 128 regardless of which machine they were created on.
 *.sfx
 # An archive format designed for the Apple II series of computers. The canonical implementation is ShrinkIt, which can operate on disk images as well as files. Preferred compression algorithm is a combination of RLE and 12-bit LZW. Archives can be manipulated with the command-line NuLib tool, or the Windows-based CiderPress.
 *.shk
@@ -139,7 +138,7 @@
 # Yamazaki zipper archive. Compression format used in DeepFreezer archiver utility created by Yamazaki Satoshi. Read and write support exists in TUGZip, IZArc and ZipZag
 *.yz1
 # The most widely used compression format on Microsoft Windows. Commonly used on Macintosh and Unix systems as well.
-# application/x-zoo   zoo   Multiple  Multiple  Yes   
+# application/x-zoo 	zoo 	Multiple 	Multiple 	Yes 	
 *.zoo
 # Journaling (append-only) archive format with rollback capability. Supports deduplication and incremental update based on last-modified dates. Multi-threaded. Compresses in LZ77, BWT, and context mixing formats. Open source.
 *.zpaq
@@ -165,7 +164,7 @@
 *.lzo
 # A compression program designed to do particularly well on very large files containing long distance redundancy.
 *.rz
-# Windows compress/decompress- Linux and Mac OS X decompress only   A compression program designed to do high compression on SF2 files (SoundFont)
+# Windows compress/decompress- Linux and Mac OS X decompress only 	A compression program designed to do high compression on SF2 files (SoundFont)
 *.sfark
 # A compression format invented by Google and open-sourced in 2011. Snappy aims for very high speeds, reasonable compression, and maximum stability rather than maximum compression or compatibility with any other compression library.
 *.sz
@@ -192,12 +191,19 @@
 *.mdb
 *.pdb
 *.sqlite3
+*.db-shm
+*.db-wal
 
 ### Jekyll ###
 _site/
 .sass-cache/
 .jekyll-cache/
 .jekyll-metadata
+# Ignore folders generated by Bundler
+.bundle/
+vendor/
+# Ignore gems lock file
+Gemfile.lock
 
 ### LaTeX ###
 ## Core latex/pdflatex auxiliary files:
@@ -311,9 +317,16 @@ acs-*.bib
 *.gls
 *.glsdefs
 *.lzs
+*.slg
+*.slo
+*.sls
 
 # uncomment this for glossaries-extra (will ignore makeindex's style files!)
 # *.ist
+
+# gnuplot
+*.gnuplot
+*.table
 
 # gnuplottex
 *-gnuplottex-*
@@ -389,6 +402,9 @@ _minted*
 # scrwfile
 *.wrt
 
+# svg
+svg-inkscape/
+
 # sympy
 *.sout
 *.sympy
@@ -412,6 +428,9 @@ pythontex-files-*/
 *.dpth
 *.md5
 *.auxlock
+
+# titletoc
+*.ptc
 
 # todonotes
 *.tdo
@@ -666,7 +685,22 @@ ipython_config.py
 #   install all needed dependencies.
 #Pipfile.lock
 
-# PEP 582; used by e.g. github.com/David-OConnor/pyflow
+# poetry
+#   Similar to Pipfile.lock, it is generally recommended to include poetry.lock in version control.
+#   This is especially recommended for binary packages to ensure reproducibility, and is more
+#   commonly ignored for libraries.
+#   https://python-poetry.org/docs/basic-usage/#commit-your-poetrylock-file-to-version-control
+#poetry.lock
+
+# pdm
+#   Similar to Pipfile.lock, it is generally recommended to include pdm.lock in version control.
+#pdm.lock
+#   pdm stores project-wide configurations in .pdm.toml, but it is recommended to not include it
+#   in version control.
+#   https://pdm.fming.dev/#use-with-ide
+.pdm.toml
+
+# PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-project/pdm
 __pypackages__/
 
 # Celery stuff
@@ -708,6 +742,23 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
+
+# PyCharm
+#  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
+#  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
+#  and can be added to the global gitignore or merged into this file.  For a more nuclear
+#  option (not recommended) you can uncomment the following to ignore the entire idea folder.
+#.idea/
+
+### Python Patch ###
+# Poetry local configuration file - https://python-poetry.org/docs/configuration/#local-configuration
+poetry.toml
+
+# ruff
+.ruff_cache/
+
+# LSP config files
+pyrightconfig.json
 
 ### SublimeText ###
 # Cache files for Sublime Text
@@ -766,8 +817,5 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
-
-# Ignoring gems lock file for Github Pages built using Jekyll
-Gemfile.lock
 
 # End of https://www.toptal.com/developers/gitignore/api/osx,linux,windows,jekyll,database,compression,compressedarchive,compressed,sublimetext,matlab,latex,python
