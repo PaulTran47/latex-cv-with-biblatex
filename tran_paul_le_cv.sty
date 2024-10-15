@@ -4,7 +4,7 @@
 
 %% LaTeX-style CV with biblatex package usage
 %% Paul L. Tran
-%% Last updated: 09 Oct, 2024.
+%% Last updated: 15 Oct, 2024.
 %=================================================
 
 %=================================================
@@ -155,19 +155,20 @@
 \makebibcategory{papers}{Refereed research papers}
 \makebibcategory{chapters}{Book chapters}
 \makebibcategory{conferences}{Papers in conference proceedings}
-\makebibcategory{techreports}{Unpublished working papers}
 \makebibcategory{bookreviews}{Book reviews}
 \makebibcategory{editorials}{Editorials}
-\makebibcategory{phd}{PhD thesis}
+\makebibcategory{phd}{Dissertation}
 \makebibcategory{subpapers}{Submitted papers}
 \makebibcategory{wps}{Working papers}
 \makebibcategory{wips}{Works in progress}
-\makebibcategory{fin}{Finished papers}
 \setlength{\bibitemsep}{2.3pt}
 \setlength{\bibhang}{.9cm}
+
+%% Creating a counter named pubitems that keeps track of how many items are in each bibliography category put into the publications
+%% environment (defined further down). For every category, the first item is labelled and assigned the value of 1.
 \renewcommand*{\bibitem}{
-  \addtocounter{papers}{1}
-  \item \mbox{}\hskip-0.9cm\hbox to 0.7cm{\hfill\arabic{papers}.~\,}
+  \addtocounter{pubitems}{1}
+  \item \mbox{}\hskip-0.9cm\hbox to 0.7cm{\hfill\arabic{pubitems}.~\,}
 }
 \defbibenvironment{bibliography}
 {\list{}
@@ -182,25 +183,40 @@
 
 %% Creating publications environment
 \newenvironment{publications}{
-  \label{papersstart}
+  %% Creating label for the beginning of the publications environment for \pageref usage
+  \label{pubitemsstart}
   \vspace*{0cm}
   \titlespacing{\section}{0pt}{1.5ex}{1ex}\itemsep = 0.00cm
 }{
-  \label{papersend}
+  %% Creating label for the end of the publications environment for \pageref usage
+  \label{pubitemsend}
   \addtocounter{sumpapers}{-1}
   \refstepcounter{sumpapers}
   \label{sumpapers}
 }
-\def\printbib#1{\printbibliography[category = #1, heading = #1]\lastref{sumpapers}}
+\def\printbib#1{
+  \printbibliography[category = #1, heading = #1]\lastref{sumpapers}
+}
 
-%% Counters for keeping track of papers
-%% Sumpapers will naturally count everything contained inside of the publications environment (because you ideally want only publications counted). For conveninecen, the following lines of code modify the count of sumpapers of the publications environment if you want to count other materials, such as manuscripts submitted for publication (because you have no publications yet :') )
-%% If you're counting the number of publications, subtract the number of .bib items THAT COME BEFORE the publications environemtn (x) from sumpapers (0 - x = -x)
-%% If you're counting the number of publications, keep sumpapers argument to equal zero since these papers go under the ``Working Papers'' category, which is first
-%% This does not need to be done for .bib items after the publications environment
-\newcounter{papers}\setcounter{papers}{0}
+%% Counting total number of items included in the publications environment
+%% Sumpapers will naturally count everything contained inside of the publications environment. However, if you include categories
+%% inside of the environment that you don't want to be included into the sumpapers value, the following comments provide guidance on
+%% how to adjust the variable to display the value you want. As a reminder, .bib items added after and outside of the publications
+%% environment do not get added into the total value of sumpapers.
+%% Initialising the counter for pubitems to be 0.
+\newcounter{pubitems}\setcounter{pubitems}{0}
+
+%% Initialising the counter for total value sumpapers to be 0.
+%% If you want to remove x publication items from being included in the total value of sumpapers, simply replace 0 with -x.
 \newcounter{sumpapers}\setcounter{sumpapers}{0}
-\def\lastref#1{\addtocounter{#1}{\value{papers}}\setcounter{papers}{0}}
+
+%% Defining sumpapers to be the sum of the sub-totals of pubitems in every category listed inside of the publications environment.
+\def\lastref#1{
+  \addtocounter{#1}{
+    \value{pubitems}
+  }
+  \setcounter{pubitems}{0}
+}
 
 %% Add all papers in the bib files
 \nocite{*}
