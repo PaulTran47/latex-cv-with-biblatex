@@ -143,6 +143,9 @@
 \urlstyle{same}
 \newcommand{\doi}[1]{\url{#1}}
 
+%% Making URL label for bibliography items appear in uppercase and same size as DOI font IN THE SITUATION small caps exist for the font
+\DeclareFieldFormat{url}{{\footnotesize URL}\addcolon\space\url{#1}}
+
 %% Remove "In:" for an article citation
 \renewbibmacro{in:}{%
   \ifentrytype{article}{}{
