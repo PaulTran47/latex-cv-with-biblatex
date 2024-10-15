@@ -4,9 +4,9 @@ layout: default
 
 ## Overview
 
-Whether deciding to enter the academic, public, or private sector, every researcher needs a curriculum vitae (Latin for "course of life") or CV for short. This document will be needed for job applications, for conferences, and for keeping track of publications and notable accomplishments.
+The journey of a researcher is a long one; every researcher will accumulate an abundance of research qualifications, publications, presentations, awards, and teaching experience over time. As a result, a curriculum vitae (CV for short) is an absolute necessity for job applications and annual performance reviews in the academic, public, or private sectors, as well as just keeping track of publications.
 
-In the academic world, LaTeX is the standard formatting language and for good reason: LaTeX makes formatting easy for maintenance and quick updates. It's for this reason that I've created a CV entirely in LaTeX. To further tailor this for academics, the CV has integration with Biblatex as well to easily update publications.
+In the academic world, LaTeX is the standard formatting language and for good reason: LaTeX makes formatting easy for maintenance and quick updates. It's for this very reason that I've created a CV entirely in LaTeX. To further tailor this for academics, the CV has integration with the awesome [biblatex package](https://ctan.org/pkg/biblatex) to easily update and maintain publications of all kinds.
 
 ## Prerequisites
 
@@ -65,18 +65,34 @@ Before the actual CV document is rendered, your preamble (in the .tex file) shou
 }
 ```
 
+* The packages installed are all listed in the .sty file.
 * Your name should be placed in the `\name` command.
-* Relevant contact information should be placed into the `\info` command. The argument is a single string, but you can have it be a very long string with multiple line breaks.
-* The final section of your preamble should be for bibiliographies. You should declare each .bib file in their individual `\addbibresource` commands. The `\addtocategory` command allows you to specify what BibTeX entry types you want to both count in your total publications and display in the CV itself. You can find out more about all the [standard entry types here](https://www.bibtex.com/e/entry-types/).
-  * It should be mentioned that custom entry types can be created, but that won't be covered here due to the relative rarity for such need
-  * You can easily create customise the naming of entry types in the accompanying .sty file. The following is an example:
-  ```
-  \makebibcategory{papers}{Publications}
+* Relevant contact information should be placed into the `\info` command. The argument is essentially a long string structured as a tabular environment with two columns, but feel free to remove or add custom rows and columns to suit your needs.
+* The final section of your preamble should be for bibliographies. You should declare each .bib file in their individual `\addbibresource` commands (using my CV as an example, I have two .bib files for working papers and works-in-progress). The `\addtocategory` command allows you to specify what BibTeX entry types you want to both count in your total publications and display in the CV itself. You can find out more about all the [standard entry types here](https://www.bibtex.com/e/entry-types/).
+  * The .sty file currently has the following pre-defined categories:
+
+    | label       | Category                         |
+    |-------------|----------------------------------|
+    | books       | Books                            |
+    | papers      | Refereed research papers         |
+    | chapters    | Book chapters                    |
+    | conferences | Papers in conference proceedings |
+    | bookreviews | Book reviews                     |
+    | editorials  | Editorials                       |
+    | phd         | PhD dissertation                 |
+    | subpapers   | Submitted papers                 |
+    | wps         | Working papers                   |
+    | wips        | Works in progress                |
+
+  * You can also create customised categories if you find the aforementioned categories not suitable. For example, if you have published software packages and wish to a specific category for those contributions, simply add the following into the .sty file
+
+  ```latex
+  \makebibcategory{software}{Published software packages}
   ```
 
 ### Document
 
-After the preamble, your .tex file should look like this:
+After the preamble, your .tex file should look like this (again using my own CV as an example):
 
 ```latex
 \begin{document}
@@ -99,18 +115,19 @@ After the preamble, your .tex file should look like this:
   \section{Research}
   \begin{compactitem}\parskip = 0cm
     \item My current interests involve applications of text analysis and natural language processing in macroeconomics, particularly in central bank communication and expectations formation.
-    %% Uncomment the following line when you actually get submissions accepted and published in journals
+    %% Uncomment the following line to display the total value of publications, submissions, and so on that are included in the
+    %% calculation of sumpapers (see .sty file for definition).
     % \item I have authored or co-authored \numberstringnum{\getrefnumber{sumpapers}} publications on economic topics. A list of these appear below.
   \end{compactitem}
   \vspace*{0.25em}
 
   %% Adding working papers, works in progress, and publications .bib files
-  %% You can include \printbib outside of the publications environment. They just won't be counted towards sumpapers
+  %% You can include \printbib outside of the publications environment. They just won't be counted towards sumpapers (see .sty file for
+  %% definition)
   \begin{publications}
     \printbib{wps}
+    \printbib{wips}
   \end{publications}
-  \vspace*{-0.75em}
-  \printbib{wips}
   \vspace*{-0.75em}
 
   \section{Honours and awards}
@@ -171,24 +188,52 @@ After the preamble, your .tex file should look like this:
 ```
 
 * `\maketitle` after `\begin{document}` inserts the header box into the LaTeX document. Afterwards, the rest of the .tex file outputs a typical LaTeX document with `\section` commands.
-* To insert publications into the document, use the `\begin{publications}` command.
+* Sections that may have many columns with detailed information, such as "Teaching history" in my own CV, are structured as tabular environments with the columns specified as paragraphs. This configuration allows for flexible management of the column widths in order to prevent horizontal overflow and crashing into the margins.
+* To insert publications into the document, use the `\begin{publications}` environment.
   * Each `\printbib` command will insert a subsection that contains all publications in that category, in chronological and descending order, and sorted by name within each year.
     * Sorting specifics can be modified within the Biblatex package options in the .sty file.
-  * The total number of publications listed inside the `publications` environment is calculated and converted into an integer using the `fmtcount` package. The page numbers for the publications section are also stored. These allow you to output them in the LaTeX document if you wish.
-  * You're allowed to have `\printbib` commands outside the `publications` enviroment, but the associated .bib items will not be counted towards the total number of publications.
-    * Note that this only works for outside `\printbib` commands that __follow__ the `publications` environment. For outside `\printbib` commands that you want displayed before the `publications` environment (e.g., working papers), you will need to manually subtract the number of .bib items from `sumpapers` in the .sty file:
+  * The total number of publication items (e.g., refereed and working papers) listed inside the `publications` environment is calculated, converted into an integer, and displayed in the CV using the `fmtcount` package. The page numbers for the publications section are also stored inside of the `\printbib` command with the labels `\label{pubitemsstart}` and `\label{pubitemsend}`. These allow you to output them in the CV using the `\pageref` command. All of these configurations can be found inside of the .sty file.
+  * You're allowed to have `\printbib` commands outside the `publications` environment, but the associated .bib items will not be counted towards the total number of publications.
 
     ```latex
-      %% Counters for keeping track of papers
-      %% Sumpapers will naturally count everything contained inside of the publications environment (because you ideally want only publications counted). For conveninecen, the following lines of code modify the count of sumpapers of the publications environment if you want to count other materials, such as manuscripts submitted for publication (because you have no publications yet :') )
-      %% If you're counting the number of publications, subtract the number of .bib items THAT COME BEFORE the publications environemtn (x) from sumpapers (0 - x = -x)
-      %% If you're counting the number of publications, keep sumpapers argument to equal zero since these papers go under the ``Working Papers'' category, which is first
-      %% This does not need to be done for .bib items after the publications environment
-      \newcounter{papers}\setcounter{papers}{0}
-      \newcounter{sumpapers}\setcounter{sumpapers}{0}
-      \def\lastref#1{\addtocounter{#1}{\value{papers}}\setcounter{papers}{0}}
+      %% Creating publications environment
+      \newenvironment{publications}{
+        %% Creating label for the beginning of the publications environment for \pageref usage
+        \label{pubitemsstart}
+        \vspace*{0cm}
+        \titlespacing{\section}{0pt}{1.5ex}{1ex}\itemsep = 0.00cm
+      }{
+        %% Creating label for the end of the publications environment for \pageref usage
+        \label{pubitemsend}
+        \addtocounter{sumpapers}{-1}
+        \refstepcounter{sumpapers}
+        \label{sumpapers}
+      }
+      \def\printbib#1{
+        \printbibliography[category = #1, heading = #1]\lastref{sumpapers}
+      }
 
-      %% Add all papers in the bib file.
+      %% Counting total number of items included in the publications environment
+      %% Sumpapers will naturally count everything contained inside of the publications environment. However, if you include categories
+      %% inside of the environment that you don't want to be included into the sumpapers value, the following comments provide guidance on
+      %% how to adjust the variable to display the value you want. As a reminder, .bib items added after and outside of the publications
+      %% environment do not get added into the total value of sumpapers.
+      %% Initialising the counter for pubitems to be 0.
+      \newcounter{pubitems}\setcounter{pubitems}{0}
+
+      %% Initialising the counter for total value sumpapers to be 0.
+      %% If you want to remove x publication items from being included in the total value of sumpapers, simply replace 0 with -x.
+      \newcounter{sumpapers}\setcounter{sumpapers}{0}
+
+      %% Defining sumpapers to be the sum of the sub-totals of pubitems in every category listed inside of the publications environment.
+      \def\lastref#1{
+        \addtocounter{#1}{
+          \value{pubitems}
+        }
+        \setcounter{pubitems}{0}
+      }
+
+      %% Add all papers in the bib files
       \nocite{*}
     ```
 
