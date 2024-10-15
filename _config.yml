@@ -1,6 +1,6 @@
 title: LaTeX CV with Biblatex
 description: CV built entirely with LaTeX. Made for academics with Biblatex integration. MIT licensed.
-google_analytics: UA-85626326-1
+google_analytics: G-8LWN282J18
 
 plugins:
   - jekyll-titles-from-headings

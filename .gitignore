@@ -767,4 +767,7 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# Ignoring gems lock file for Github Pages built using Jekyll
+Gemfile.lock
+
 # End of https://www.toptal.com/developers/gitignore/api/osx,linux,windows,jekyll,database,compression,compressedarchive,compressed,sublimetext,matlab,latex,python
