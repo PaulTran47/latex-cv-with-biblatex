@@ -139,6 +139,10 @@
 \DeclareFieldFormat{shorthandwidth}{#1}
 \DeclareFieldFormat{extradate}{}
 
+%% Making URL the same font as text, not courier default
+\urlstyle{same}
+\newcommand{\doi}[1]{\url{#1}}
+
 %% Remove "In:" for an article citation
 \renewbibmacro{in:}{%
   \ifentrytype{article}{}{
