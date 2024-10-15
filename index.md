@@ -79,7 +79,7 @@ Before the actual CV document is rendered, your preamble (in the .tex file) shou
     | conferences | Papers in conference proceedings |
     | bookreviews | Book reviews                     |
     | editorials  | Editorials                       |
-    | phd         | PhD dissertation                 |
+    | phd         | Dissertation                     |
     | subpapers   | Submitted papers                 |
     | wps         | Working papers                   |
     | wips        | Works in progress                |
@@ -106,18 +106,18 @@ After the preamble, your .tex file should look like this (again using my own CV 
   \end{tabular}
   \vspace*{0.25em}
 
-  \section{Dissertation}
-  \begin{compactitem}\parskip = 0cm
-    \item Committee: Olivier Coibion (Co-Supervisor), Christoph Boehm (Co-Supervisor), Saroj Bhattarai, and Amy Handlan (Brown University)
-  \end{compactitem}
-  \vspace*{0.25em}
-
   \section{Research}
   \begin{compactitem}\parskip = 0cm
     \item My current interests involve applications of text analysis and natural language processing in macroeconomics, particularly in central bank communication and expectations formation.
     %% Uncomment the following line to display the total value of publications, submissions, and so on that are included in the
     %% calculation of sumpapers (see .sty file for definition).
     % \item I have authored or co-authored \numberstringnum{\getrefnumber{sumpapers}} publications on economic topics. A list of these appear below.
+  \end{compactitem}
+  \vspace*{0.25em}
+
+  \section{Dissertation}
+  \begin{compactitem}\parskip = 0cm
+    \item Committee: Olivier Coibion (Co-Supervisor), Christoph Boehm (Co-Supervisor), Saroj Bhattarai, and Amy Handlan (Brown University)
   \end{compactitem}
   \vspace*{0.25em}
 
