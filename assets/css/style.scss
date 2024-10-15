@@ -9,7 +9,12 @@
   background-color: #fdcc48;
   background-image: linear-gradient(120deg,#0233b7,#fdcc48);
 }
-
+body {
+  font-family: 'JetBrains Mono', 'Courier New', 'Courier', monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.87);
+}
 .main-content code {
-  font-family: 'JetBrains Mono', 'Consolas', 'liberation mono', 'Menlo', 'Courier New', 'Courier', monospace;
+  font-family: 'JetBrains Mono', 'Courier New', 'Courier', monospace;
 }
