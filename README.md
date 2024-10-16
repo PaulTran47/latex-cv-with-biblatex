@@ -8,6 +8,7 @@
     <li>
       <a href="#overview">Overview</a>
       <ul>
+        <li><a href="#reporting-vulnerabilities">Reporting vulnerabilities</a></li>
         <li><a href="#notable-features">Notable features</a></li>
       </ul>
     </li>
@@ -19,9 +20,23 @@
 
 ## Overview
 
-This respository hosts all assets and source code that create my curriculum vitae (CV).
+This repository hosts all assets and source code that create my curriculum vitae (CV).
 
-I love LaTeX and use it so much, I figured using the language for the creation and maintenance of my CV is a natural move. 
+I love LaTeX and use it so much, I figured using the language for the creation
+and maintenance of my CV is a natural move.
+
+<p align="right">
+  (<a href="#latex-cv-with-biblatex">back to top.</a>)
+</p>
+
+---
+
+### Reporting vulnerabilities
+
+If you discover a vulnerability/error/mistake in the production code of my
+website, please [refer to the instructions found in SECURITY.md](https://github.com/PaulTran47/latex-cv-with-biblatex/blob/gh-pages/SECURITY.md)
+for instructions on reporting these issues. I will then address the problem as
+soon as possible.
 
 <p align="right">
   (<a href="#latex-cv-with-biblatex">back to top.</a>)
