@@ -29,6 +29,16 @@ I love LaTeX and use it so much, I figured using the language for the creation a
 
 ---
 
+### Reporting vulnerabilities
+
+If you discover a vulnerability/error/mistake in the production code of my website, please [refer to the instructions found in SECURITY.md](https://github.com/PaulTran47/latex-cv-with-biblatex/blob/gh-pages/SECURITY.md) for instructions on reporting these issues. I will then address the problem as soon as possible.
+
+<p align="right">
+  (<a href="#latex-cv-with-biblatex">back to top.</a>)
+</p>
+
+---
+
 ### Notable features
 
 * Built entirely with LaTeX for ease-of-maintenance and quick updates.
