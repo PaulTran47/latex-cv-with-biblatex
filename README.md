@@ -20,9 +20,10 @@
 
 ## Overview
 
-This respository hosts all assets and source code that create my curriculum vitae (CV).
+This repository hosts all assets and source code that create my curriculum vitae (CV).
 
-I love LaTeX and use it so much, I figured using the language for the creation and maintenance of my CV is a natural move. 
+I love LaTeX and use it so much, I figured using the language for the creation
+and maintenance of my CV is a natural move.
 
 <p align="right">
   (<a href="#latex-cv-with-biblatex">back to top.</a>)
@@ -32,7 +33,10 @@ I love LaTeX and use it so much, I figured using the language for the creation a
 
 ### Reporting vulnerabilities
 
-If you discover a vulnerability/error/mistake in the production code of my website, please [refer to the instructions found in SECURITY.md](https://github.com/PaulTran47/latex-cv-with-biblatex/blob/gh-pages/SECURITY.md) for instructions on reporting these issues. I will then address the problem as soon as possible.
+If you discover a vulnerability/error/mistake in the production code of my
+website, please [refer to the instructions found in SECURITY.md](https://github.com/PaulTran47/latex-cv-with-biblatex/blob/gh-pages/SECURITY.md)
+for instructions on reporting these issues. I will then address the problem as
+soon as possible.
 
 <p align="right">
   (<a href="#latex-cv-with-biblatex">back to top.</a>)
@@ -43,7 +47,9 @@ If you discover a vulnerability/error/mistake in the production code of my websi
 ### Notable features
 
 * Built entirely with LaTeX for ease-of-maintenance and quick updates.
-* Built for academics. This means [Biblatex](https://ctan.org/pkg/biblatex?lang=en) is naturally incorporated, and all shown bibliographies are in chronological and descending order, and sorted by name within each year.
+* Built for academics. This means [Biblatex](https://ctan.org/pkg/biblatex?lang=en)
+is naturally incorporated, and all shown bibliographies are in chronological and
+descending order, and sorted by name within each year.
 * Total number of publications are counted for quick display if desired.
 
 <p align="right">
@@ -73,7 +79,11 @@ If you discover a vulnerability/error/mistake in the production code of my websi
   * [paralist](https://ctan.org/pkg/paralist)
   * [enumitem](https://ctan.org/pkg/enumitem)
   * [array](https://ctan.org/pkg/array)
-  * [biblatex](https://ctan.org/pkg/biblatex) (with backend of [Biber](https://ctan.org/pkg/biber) and options sorting = ydnt, citestyle = authoryear, bibstyle = authoryear-comp, defernumbers = true, maxnames = 20, giveninits = false, bibencoding = utf8, terseinits = true, uniquename = init, dashed = false, doi = true, isbn = false, natbib = true, backend = biber, date = year)
+  * [biblatex](https://ctan.org/pkg/biblatex) (with backend of [Biber](https://ctan.org/pkg/biber)
+  and options sorting = ydnt, citestyle = authoryear, bibstyle = authoryear-comp,
+  defernumbers = true, maxnames = 20, giveninits = false, bibencoding = utf8,
+  terseinits = true, uniquename = init, dashed = false, doi = true,
+  isbn = false, natbib = true, backend = biber, date = year)
 
 <p align="right">
   (<a href="#latex-cv-with-biblatex">back to top.</a>)
