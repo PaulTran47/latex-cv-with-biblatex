@@ -8,6 +8,7 @@
     <li>
       <a href="#overview">Overview</a>
       <ul>
+        <li><a href="#reporting-vulnerabilities">Reporting vulnerabilities</a></li>
         <li><a href="#notable-features">Notable features</a></li>
       </ul>
     </li>
