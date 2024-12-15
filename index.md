@@ -145,7 +145,7 @@ After the preamble, your .tex file should look like this (again using my own CV 
   \end{compactitem}
   \vspace*{0.70em}
   ~\begin{tabular}{p{2.3cm} p{2.4cm} p{2.8cm} p{6.6cm}}
-    University of \newline Texas at Austin & Fall 2024 & Assistant Instructor & \textbf{ECO304L: Introduction to \newline Macroeconomics}\\
+    University of \newline Texas at Austin & Fall 2024, \newline Spring 2025 & Assistant Instructor & \textbf{ECO304L: Introduction to \newline Macroeconomics}\\
     & Spring 2024 & Teaching Assistant \newline (Prof. Mueller) & \textbf{ECO395L: Macro and the Labor Market \newline (MA course)}\\
     & & Teaching Assistant \newline (Prof. Oettinger) & \textbf{ECO395K: Labor Economics (MA course)}\\
     & Fall 2021 - 2023 & Teaching Assistant \newline (Profs. Acchiardo, \newline Geerling, Mateer) & \textbf{ECO304K: Introduction to Microeconomics \newline (Synchronous Massive Online Course for \newline fall)}\\
