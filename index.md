@@ -140,7 +140,7 @@ After the preamble, your .tex file should look like this (again using my own CV 
 
   \section{Teaching history}\label{sec:teaching_history}
   \begin{compactitem}\parskip = 0cm
-    \item Since Fall 2020, student evaluations have given an average rating for my teaching of 4.25 out of 5.
+    \item Since Fall 2020, student evaluations have given an average rating for my teaching of 4.34 out of 5.
     \item I earned an \href{https://ctl.utexas.edu/teaching-preparation-series}{Advanced Teaching Preparation Certificate} in 2023 from the University of Texas at Austin.
   \end{compactitem}
   \vspace*{0.70em}
