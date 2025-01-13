@@ -168,9 +168,10 @@ After the preamble, your .tex file should look like this (again using my own CV 
   \vspace*{0.25em}
       
   \section{Grants}
-  ~\begin{tabular}{llll}
-    2024 & \textbf{PhD Summer Research Fellowship} & University of Texas at Austin, & \$5,000\\
-    2023 & \textbf{PhD Summer Research Fellowship} & University of Texas at Austin, & \$3,000\\
+  ~\begin{tabular}{p{0.7cm} p{7.75cm} p{4.2cm} p{0.95cm}}
+    2025 & \textbf{Empirical Macro Economics Policy Center of Texas \newline Dissertation Funding} & University of Texas at Austin & \$1,919\\
+    2024 & \textbf{PhD Summer Research Fellowship} & University of Texas at Austin & \$5,000\\
+    2023 & \textbf{PhD Summer Research Fellowship} & University of Texas at Austin & \$3,000\\
     2016 & \textbf{Harry G. Steele Scholarship} & Pomona College & \$4,000\\
     2013 & \textbf{Flextronics Texas Scholarship} & Pomona College & \$1,000
   \end{tabular}
@@ -182,7 +183,7 @@ After the preamble, your .tex file should look like this (again using my own CV 
     \item \textbf{Front-end Development:} Vanilla HTML, CSS, JS, Jekyll
     \item \textbf{Applications:} Visual Studio Code, Emacs, Git, Sublime Text, RStudio, Tableau, Microsoft Office
     \item \textbf{Operating Systems:} Unix, Linux, Windows
-    \item \textbf{Languages:} Vietnamese (native), English (native)
+    \item \textbf{Languages:} English (native), Vietnamese (native)
   \end{compactitem}
 \end{document}
 ```
