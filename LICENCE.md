@@ -1,6 +1,6 @@
 # MIT Licence
 
-Copyright (c) 2024 Paul L. Tran
+Copyright (c) 2025 Paul L. Tran
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
